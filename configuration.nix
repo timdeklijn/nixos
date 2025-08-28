@@ -1,11 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-     <nixos-hardware/framework/13-inch/7040-amd> # Framework specific hardware drivers
-     ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    <nixos-hardware/framework/13-inch/7040-amd> # Framework specific hardware drivers
+    ./hardware-configuration.nix
+  ];
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -38,7 +40,10 @@
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver = {
-    videoDrivers = [ "displaylink" "modesetting" ];
+    videoDrivers = [
+      "displaylink"
+      "modesetting"
+    ];
     enable = true;
   };
 
@@ -46,6 +51,7 @@
     KWIN_DRM_PREFER_COLOR_DEPTH = "24";
   };
 
+  # Use KDE Plasma as desktop environment
   services = {
     desktopManager.plasma6 = {
       enable = true;
@@ -57,7 +63,7 @@
       };
       defaultSession = "plasma";
     };
-  
+
   };
 
   # Configure keymap in X11
@@ -85,8 +91,7 @@
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.fprintd.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -95,66 +100,69 @@
   users.users.tim = {
     isNormalUser = true;
     description = "Tim de Klijn";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-    packages = with pkgs; [
-	    direnv
-	    eza
-	    fzf
-	    git
-	    git-lfs
-	    kitty
-	    starship
-	    tmux
-	    vim
-      wget
-	    zoxide
-
-	    dropbox
-	    obsidian
-	    signal-desktop
-	    vscode-fhs
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
     ];
+    # user packages
+    packages = with pkgs; [
+      # command lin utilities
+      direnv
+      eza
+      fzf
+      git
+      git-lfs
+      just
+      kitty
+      nixfmt-rfc-style
+      starship
+      tmux
+      vim
+      wget
+      zoxide
+
+      # 'GUI' programs
+      citrix_workspace
+      dropbox
+      obsidian
+      signal-desktop
+      slack
+      vscode-fhs
+    ];
+    # Set default shell
     shell = pkgs.zsh;
   };
 
-  virtualisation.docker = {
-    enable = true;
-  };
-
-  # 25.05 (or later)
+  # download nerd fonts
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
+    nerd-fonts.geist-mono
   ];
 
+  # use 1password
   programs._1password.enable = true;
   programs._1password-gui = {
     enable = true;
     polkitPolicyOwners = [ "tim" ];
   };
 
+  # Configure shell tools
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
-
     histSize = 10000;
     histFile = "$HOME/.zsh_history";
     setOptions = [
       "HIST_IGNORE_ALL_DUPS"
     ];
   };
-
   programs.starship.enable = true;
-
-  # This is required to get the right drivers fro my framework laptop
-  services.fwupd.enable = true;
-  hardware.framework.amd-7040.preventWakeOnAC = true;
-
-  # Install firefox.
   programs.firefox.enable = true;
 
-
+  # Global packages
   environment.systemPackages = with pkgs; [
     # Follow this:
     # https://wiki.nixos.org/wiki/Displaylink
@@ -165,11 +173,23 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Docker should work, and there should be an ssh-agent active that forwards
+  # the hosts ssh credentials.
+  virtualisation.docker = {
+    enable = true;
+    extraPackages = [ pkgs.openssh ];
+  };
+  programs.ssh.startAgent = true;
+
+  # This is required to get the right drivers fro my framework laptop
+  services.fwupd.enable = true;
+  hardware.framework.amd-7040.preventWakeOnAC = true;
+
   # remove old generations
   nix.gc = {
-  	automatic = true;
-  	dates = "daily";
-  	options = "--delete-older-than 10d";
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 10d";
   };
 
   # Open ports in the firewall.
