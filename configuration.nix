@@ -129,6 +129,7 @@
       obsidian
       signal-desktop
       slack
+      spotify
       vscode-fhs
     ];
     # Set default shell
