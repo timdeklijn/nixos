@@ -107,7 +107,7 @@
     ];
     # user packages
     packages = with pkgs; [
-      # command lin utilities
+      # command line utilities
       direnv
       eza
       fzf
@@ -124,7 +124,7 @@
       zoxide
 
       # 'GUI' programs
-      citrix_workspace
+      citrix_workspace # needs a manual download due to enduser license agreements
       dropbox
       obsidian
       signal-desktop
