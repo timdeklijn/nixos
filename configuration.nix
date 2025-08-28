@@ -116,6 +116,7 @@
       just
       kitty
       nixfmt-rfc-style
+      ripgrep
       starship
       tmux
       vim
