@@ -6,6 +6,7 @@ _nix_rebuild:
 rebuild: _nix_rebuild
     #!/usr/bin/env bash
     set -euxo pipefail
+    nixfmt *.nix
     GENERATION=$(sudo nix-env -p /nix/var/nix/profiles/system --list-generations | rg "current" | awk '{print $1}')
     git add .
     git commit -m "generation $GENERATION"
