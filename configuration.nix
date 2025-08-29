@@ -190,6 +190,19 @@
   # This is required to get the right drivers fro my framework laptop
   services.fwupd.enable = true;
   hardware.framework.amd-7040.preventWakeOnAC = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+        FastConnectable = true;
+      };
+      Policy = {
+        AutoEnable = true;
+      };
+    };
+  };
 
   # remove old generations
   nix.gc = {
