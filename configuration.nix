@@ -111,6 +111,7 @@
     # user packages
     packages = with pkgs; [
       # command line utilities
+      btop
       direnv
       eza
       fzf
