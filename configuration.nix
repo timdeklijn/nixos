@@ -30,7 +30,7 @@
     };
   };
   networking.networkmanager.wifi.backend = "iwd";
-  # networking.networkmanager.enable = true;
+  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
