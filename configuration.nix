@@ -20,6 +20,16 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
+  networking.wireless.iwd.enable = true;
+  networking.wireless.iwd.settings = {
+    Network = {
+      EnableIPv6 = true;
+    };
+    Settings = {
+      AutoConnect = true;
+    };
+  };
+  networking.networkmanager.wifi.backend = "iwd";
   networking.networkmanager.enable = true;
 
   # Set your time zone.
