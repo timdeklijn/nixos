@@ -75,7 +75,7 @@
       color14 = "#93e0e3";
       color7 = "#dcdccc";
       color15 = "#ffffff";
-      selection_foreground = "#3f3f3f%";
+      selection_foreground = "#3f3f3f";
     };
   };
 
