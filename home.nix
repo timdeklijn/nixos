@@ -47,7 +47,7 @@
     enable = true;
     settings = {
       background_opacity = 1.0;
-      confirm_os_window_close = false;
+      confirm_os_window_close = 0;
       font_family = "GeistMono Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
@@ -80,7 +80,7 @@
   };
 
   programs.zsh = {
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
   };
