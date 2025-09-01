@@ -5,8 +5,8 @@
   home.homeDirectory = "/home/tim";
 
   # nix.package = pkgs.nix;
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = (_: true);
+  # nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfreePredicate = (_: true);
 
   home.packages = with pkgs; [
     # command line utilities
