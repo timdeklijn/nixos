@@ -18,9 +18,7 @@
       home-manager,
       ...
     }@inputs:
-    let
-      inherit (self) outputs;
-    in
+
     {
       # Describe my system
       nixosConfigurations = {
@@ -31,14 +29,9 @@
           ];
         };
       };
-
-      homeConfigurations = {
-        "tim@fw13" = home-manager.lib.HomeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ "./home.nix" ];
-        };
+      homeConfigurations."tim" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [ ./home.nix ];
       };
-
     };
 }
