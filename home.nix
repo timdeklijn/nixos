@@ -101,7 +101,7 @@
       ls = "eza";
       ll = "eza -la";
     };
-    initExtra.".zshrc".test = ''
+    initExtra.".zshrc".text = ''
       eval "$(starship init bash)"
     '';
   };
