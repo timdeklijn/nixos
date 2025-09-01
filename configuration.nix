@@ -118,38 +118,11 @@
       "wheel"
       "docker"
     ];
-    # user packages
-    # packages = with pkgs; [
-    #   # command line utilities
-    #   btop
-    #   direnv
-    #   eza
-    #   fzf
-    #   git
-    #   git-lfs
-    #   just
-    #   kitty
-    #   neofetch
-    #   nixfmt-rfc-style
-    #   ripgrep
-    #   starship
-    #   tmux
-    #   vim
-    #   wget
-    #   zoxide
-
-    #   # 'GUI' programs
-    #   citrix_workspace # needs a manual download due to enduser license agreements
-    #   dropbox
-    #   obsidian
-    #   signal-desktop
-    #   slack
-    #   spotify
-    #   vscode-fhs
-    # ];
     # Set default shell
     shell = pkgs.zsh;
   };
+
+  programs.zsh.enable = true;
 
   # download nerd fonts
   fonts.packages = with pkgs; [
@@ -162,21 +135,6 @@
     enable = true;
     polkitPolicyOwners = [ "tim" ];
   };
-
-  # Configure shell tools
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    histSize = 10000;
-    histFile = "$HOME/.zsh_history";
-    setOptions = [
-      "HIST_IGNORE_ALL_DUPS"
-    ];
-  };
-  # programs.starship.enable = true;
-  # programs.firefox.enable = true;
 
   # Global packages
   environment.systemPackages = with pkgs; [
