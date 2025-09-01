@@ -52,7 +52,7 @@
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
-      font_size = "16.0";
+      font_size = "17.0";
       enable_audio_bell = "no";
       macos_titlebar_color = "background";
       background = "#000000";
