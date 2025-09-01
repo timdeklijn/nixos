@@ -4,34 +4,11 @@
   home.username = "tim";
   home.homeDirectory = "/home/tim";
   home.packages = with pkgs; [
-    btop
-    direnv
-    eza
-    fzf
-    git
-    git-lfs
-    just
-    kitty
-    neofetch
-    nixfmt-rfc-style
-    ripgrep
-    starship
-    tmux
-    vim
-    wget
-    zoxide
-
-    # 'GUI' programs
-    citrix_workspace # needs a manual download due to enduser license agreements
-    dropbox
-    obsidian
-    signal-desktop
-    slack
-    spotify
-    vscode-fhs
+    neovim
   ];
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  systemd.user.startServices = "sd-switch";
 
   programs.starship.enable = true;
   programs.firefox.enable = true;
