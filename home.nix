@@ -85,6 +85,7 @@
     enableZshIntegration = true;
   };
   programs.zsh = {
+    enable = true;
     autosuggestion.enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
@@ -102,9 +103,9 @@
       ls = "eza";
       ll = "eza -la";
     };
-    initExtra.".zshrc".text = ''
-      eval "$(starship init bash)"
-    '';
+    # initExtra.".zshrc".text = ''
+    #   eval "$(starship init bash)"
+    # '';
   };
 
   services.gpg-agent = {
