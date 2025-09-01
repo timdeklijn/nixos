@@ -40,7 +40,6 @@
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 
-  programs.starship.enable = true;
   programs.firefox.enable = true;
 
   programs.kitty = {
@@ -79,35 +78,33 @@
     };
   };
 
+  programs.starship.enable = true;
+  programs.zoxide.enable = true;
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
   programs.zsh = {
     autosuggestion.enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
+    shellAliases = {
+      ga = "git add";
+      gs = "git status";
+      gc = "git commit";
+      gp = "git push";
+      gP = "git pull";
+      gl = "git log";
+      k = "kubectl";
+      kc = "kubectl ctx";
+      kn = "kubectl ns";
+      ls = "eza";
+      ll = "eza -la";
+    };
+    initExtra.".zshrc".test = ''
+      eval "$(starship init bash)"
+    '';
   };
-
-  # zplug = {
-  #   enable = true;
-  #   plugins = [
-  #     { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
-  #     { name = "zsh-users/zsh-history-substring-search"; } # Simple plugin installation
-  #     { name = "zsh-users/zsh-syntax-highlighting"; } # Simple plugin installation
-  #     # { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; } # Installations with additional options. For the list of options, please refer to Zplug README.
-  #   ];
-  # };
-
-  # # Configure shell tools
-  # programs.zsh = {
-  #   enable = true;
-  #   enableCompletion = true;
-  #   autosuggestions.enable = true;
-  #   # syntaxHighlighting.enable = true;
-  #   enableSyntaxHighlighting = true;
-  #   histSize = 10000;
-  #   histFile = "$HOME/.zsh_history";
-  #   setOptions = [
-  #     "HIST_IGNORE_ALL_DUPS"
-  #   ];
-  # };
 
   services.gpg-agent = {
     enable = true;
