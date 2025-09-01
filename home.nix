@@ -88,6 +88,7 @@
     autosuggestion.enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
+    dotDir = ".config/zsh";
     shellAliases = {
       ga = "git add";
       gs = "git status";
