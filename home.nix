@@ -4,7 +4,32 @@
   home.username = "tim";
   home.homeDirectory = "/home/tim";
   home.packages = with pkgs; [
-    neovim
+    # command line utilities
+    btop
+    direnv
+    eza
+    fzf
+    git
+    git-lfs
+    just
+    kitty
+    neofetch
+    nixfmt-rfc-style
+    ripgrep
+    starship
+    tmux
+    vim
+    wget
+    zoxide
+
+    # 'GUI' programs
+    citrix_workspace # needs a manual download due to enduser license agreements
+    dropbox
+    obsidian
+    signal-desktop
+    slack
+    spotify
+    vscode-fhs
   ];
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

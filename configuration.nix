@@ -119,34 +119,34 @@
       "docker"
     ];
     # user packages
-    packages = with pkgs; [
-      # command line utilities
-      btop
-      direnv
-      eza
-      fzf
-      git
-      git-lfs
-      just
-      kitty
-      neofetch
-      nixfmt-rfc-style
-      ripgrep
-      starship
-      tmux
-      vim
-      wget
-      zoxide
+    # packages = with pkgs; [
+    #   # command line utilities
+    #   btop
+    #   direnv
+    #   eza
+    #   fzf
+    #   git
+    #   git-lfs
+    #   just
+    #   kitty
+    #   neofetch
+    #   nixfmt-rfc-style
+    #   ripgrep
+    #   starship
+    #   tmux
+    #   vim
+    #   wget
+    #   zoxide
 
-      # 'GUI' programs
-      citrix_workspace # needs a manual download due to enduser license agreements
-      dropbox
-      obsidian
-      signal-desktop
-      slack
-      spotify
-      vscode-fhs
-    ];
+    #   # 'GUI' programs
+    #   citrix_workspace # needs a manual download due to enduser license agreements
+    #   dropbox
+    #   obsidian
+    #   signal-desktop
+    #   slack
+    #   spotify
+    #   vscode-fhs
+    # ];
     # Set default shell
     shell = pkgs.zsh;
   };

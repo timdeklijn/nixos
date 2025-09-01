@@ -30,6 +30,7 @@
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
+              # TODO: this import can be something different I think
               home-manager.users."tim" = import ./home.nix;
             }
           ];
