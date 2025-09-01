@@ -6,8 +6,9 @@
 
     # Used for user packages and dotfiles
     home-manager = {
-      url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs"; # Use system packages list where available
+      # Follow corresponding `release` branch from Home Manager
+      url = "github:nix-community/home-manager/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -26,12 +27,13 @@
           system = "x86_64-linux";
           modules = [
             ./configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.users."tim" = import ./home.nix;
+            }
           ];
         };
-      };
-      homeConfigurations."tim" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        modules = [ ./home.nix ];
       };
     };
 }
