@@ -30,8 +30,17 @@
     spotify
     vscode-fhs
   ];
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+
   programs.starship.enable = true;
   programs.firefox.enable = true;
+
+  services.gpg-agent = {
+    enable = true;
+    defaultCacheTtl = 1800;
+    enableSshSupport = true;
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -43,12 +52,4 @@
   # changes in each release.
   home.stateVersion = "25.05";
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
-  services.gpg-agent = {
-    enable = true;
-    defaultCacheTtl = 1800;
-    enableSshSupport = true;
-  };
 }

@@ -36,7 +36,7 @@
         "tim@fw13" = home-manager.lib.HomeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ "home.nix" ];
+          modules = [ "./home.nix" ];
         };
       };
 

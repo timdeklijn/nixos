@@ -153,7 +153,6 @@
 
   # download nerd fonts
   fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
     nerd-fonts.geist-mono
   ];
 
@@ -176,8 +175,8 @@
       "HIST_IGNORE_ALL_DUPS"
     ];
   };
-  programs.starship.enable = true;
-  programs.firefox.enable = true;
+  # programs.starship.enable = true;
+  # programs.firefox.enable = true;
 
   # Global packages
   environment.systemPackages = with pkgs; [
