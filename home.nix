@@ -43,7 +43,7 @@
     enable = true;
     # These settings are simply copied from my kitty config.
     settings = {
-      background_opacity = 1.0;
+      background_opacity = 0.8;
       confirm_os_window_close = 0;
       font_family = "GeistMono Nerd Font Mono";
       bold_font = "auto";
@@ -121,6 +121,7 @@
     };
   };
 
+  # Make sure that I can use my ssh settings while in a devcontianer:
   home.file.".ssh/config".text = ''
     AddKeysToAgent yes
   '';
