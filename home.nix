@@ -121,6 +121,10 @@
     };
   };
 
+  home.file.".ssh/config".text = ''
+    AddKeysToAgent yes
+  '';
+
   # TODO: configure tmux
   # TODO: configure vscode
 
