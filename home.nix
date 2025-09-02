@@ -4,10 +4,6 @@
   home.username = "tim";
   home.homeDirectory = "/home/tim";
 
-  # nix.package = pkgs.nix;
-  # nixpkgs.config.allowUnfree = true;
-  # nixpkgs.config.allowUnfreePredicate = (_: true);
-
   home.packages = with pkgs; [
     # command line utilities
     btop
@@ -42,8 +38,10 @@
 
   programs.firefox.enable = true;
 
+  # Configure kitty
   programs.kitty = {
     enable = true;
+    # These settings are simply copied from my kitty config.
     settings = {
       background_opacity = 1.0;
       confirm_os_window_close = 0;
@@ -59,25 +57,26 @@
       cursor = "#73635a";
       selection_background = "#21322f";
       color0 = "#4d4d4d";
-      color8 = "#709080";
       color1 = "#705050";
-      color9 = "#dca3a3";
-      color2 = "#60b48a";
       color10 = "#c3bf9f";
-      color3 = "#f0deae";
       color11 = "#dfcf9f";
-      color4 = "#506070";
       color12 = "#94bff3";
-      color5 = "#dc8cc3";
       color13 = "#ec93d3";
-      color6 = "#8cd0d3";
       color14 = "#93e0e3";
-      color7 = "#dcdccc";
       color15 = "#ffffff";
+      color2 = "#60b48a";
+      color3 = "#f0deae";
+      color4 = "#506070";
+      color5 = "#dc8cc3";
+      color6 = "#8cd0d3";
+      color7 = "#dcdccc";
+      color8 = "#709080";
+      color9 = "#dca3a3";
       selection_foreground = "#3f3f3f";
     };
   };
 
+  # Configure zsh with nice tools
   programs.starship.enable = true;
   programs.zoxide.enable = true;
   programs.fzf = {
@@ -85,11 +84,18 @@
     enableZshIntegration = true;
   };
   programs.zsh = {
+    # This should be set to true, even if it is set to configuration.nix.
     enable = true;
+
+    # enable suggestions, completions and highlighting
     autosuggestion.enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
+
+    # Save zsh config files here.
     dotDir = ".config/zsh";
+
+    # Add my zsh aliases.
     shellAliases = {
       ga = "git add";
       gs = "git status";
@@ -103,10 +109,10 @@
       ls = "eza";
       ll = "eza -la";
     };
-    # initExtra.".zshrc".text = ''
-    #   eval "$(starship init bash)"
-    # '';
   };
+
+  # TODO: configure tmux
+  # TODO: configure vscode
 
   services.gpg-agent = {
     enable = true;

@@ -17,20 +17,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "fw13"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   # Enable networking
-  networking.wireless.iwd.enable = true;
-  networking.wireless.iwd.settings = {
-    Network = {
-      EnableIPv6 = true;
-    };
-    Settings = {
-      AutoConnect = true;
-    };
-  };
-  networking.networkmanager.wifi.backend = "iwd";
-  networking.networkmanager.enable = true;
+  # networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
@@ -157,6 +147,7 @@
   # This is required to get the right drivers fro my framework laptop
   services.fwupd.enable = true;
   hardware.framework.amd-7040.preventWakeOnAC = true;
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
