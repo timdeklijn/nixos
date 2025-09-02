@@ -2,10 +2,14 @@
 
 ## How to setup
 
-## Dev setup
+The following command will:
 
-For python development, nothing beats a devcontainer. Untill NixOS actually works with python (`uv`) it is simply far easier to just spin up a container. To get git credential passthrough working it might be required to run:
+1. upgrade flake
+2. rebuild and switch nixos (including home manager)
+3. format all `nix` files
+3. extract generation number from current nixos-generation
+4. commit and push changes with generation number in the commit message
 
 ``` sh
-ssh-add $HOME/.ssh/id_rsa
+just rebuild
 ```
