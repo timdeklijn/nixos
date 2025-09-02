@@ -43,9 +43,9 @@
     enable = true;
     # These settings are simply copied from my kitty config.
     settings = {
-      background_opacity = 0.8;
+      background_opacity = 1.0;
       confirm_os_window_close = 0;
-      font_family = "GeistMono Nerd Font Mono";
+      font_family = "UbuntuMono Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
@@ -105,7 +105,7 @@
     # Save zsh config files here.
     dotDir = ".config/zsh";
 
-    # Add my zsh aliases.
+    # Add my zsh aliases. Requires `eza`.
     shellAliases = {
       ga = "git add";
       gs = "git status";
