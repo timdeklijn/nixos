@@ -17,21 +17,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "fw13"; # Define your hostname.
-  # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
-
-  # networking.wireless.iwd.enable = true;
-  # networking.wireless.iwd.settings = {
-  #   Network = {
-  #     EnableIPv6 = true;
-  #   };
-  #   Settings = {
-  #     AutoConnect = true;
-  #   };
-  # };
-  # networking.networkmanager.wifi.backend = "iwd";
   networking.networkmanager.enable = true;
-  # Enable networking
-  # networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
