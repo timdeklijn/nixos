@@ -1,16 +1,5 @@
 { config, pkgs, ... }:
-let
-  tmux-minimal-theme = pkgs.tmuxPlugins.mkTmuxPlugin {
-    pluginName = "tmux-minimal-theme";
-    version = "1.0";
-    src = pkgs.fetchFromGitHub {
-      owner = "binoymanoj";
-      repo = "tmux-minimal-theme";
-      rev = "29dad92c8a2486e5b6f116e42883906c00a1f0a2";
-      sha256 = "sha256-ymmCI6VYvf94Ot7h2GAboTRBXPIREP+EB33+px5aaJk=";
-    };
-  };
-in
+
 {
   home.username = "tim";
   home.homeDirectory = "/home/tim";
@@ -149,7 +138,6 @@ in
     escapeTime = 1;
     baseIndex = 1;
     plugins = [
-      # tmux-minimal-theme
       pkgs.tmuxPlugins.vim-tmux-navigator
       pkgs.tmuxPlugins.gruvbox
     ];
@@ -172,8 +160,7 @@ in
       bind -r K resize-pane -U 5
       bind -r L resize-pane -R 5
 
-      set-option -g status-right ""
-      set-option -g status-position top
+      set-option -g status-position bottom
 
       set -g @minimal_theme_bg_color "#1d2021"
       set -g @minimal_theme_active_color "#83a598"
