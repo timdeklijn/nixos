@@ -27,10 +27,10 @@
     citrix_workspace # needs a manual download due to enduser license agreements
     dropbox
     obsidian
+    orca-slicer
     signal-desktop
     slack
     spotify
-    super-slicer
     vscode-fhs
   ];
   # Let Home Manager install and manage itself.
