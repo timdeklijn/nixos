@@ -38,20 +38,24 @@
 
   programs.firefox.enable = true;
 
-  # Configure kitty
   programs.kitty = {
     enable = true;
     # These settings are simply copied from my kitty config.
     settings = {
-      background_opacity = 1.0;
-      confirm_os_window_close = 0;
+      # Fonts
       font_family = "ProFont IIx Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
       font_size = "13.0";
+
+      # Settings
+      background_opacity = 0.9;
+      confirm_os_window_close = 0;
       enable_audio_bell = "no";
       macos_titlebar_color = "background";
+
+      # Theme
       cursor = "#928374";
       cursor_text_color = "#000000";
       url_color = "#83a598";
@@ -151,8 +155,8 @@
       bind _ split-window -v
 
       # vim style through windows (PRE Control-H/L)
-      bind -r C-h select-window -t :-
-      bind -r C-l select-window -t :+
+      # bind -r C-h select-window -t :-
+      # bind -r C-l select-window -t :+
 
       # vim style through resizing
       bind -r H resize-pane -L 5
@@ -161,13 +165,6 @@
       bind -r L resize-pane -R 5
 
       set-option -g status-position bottom
-
-      set -g @minimal_theme_bg_color "#1d2021"
-      set -g @minimal_theme_active_color "#83a598"
-      set -g @minimal_theme_inactive_color "#665c54"
-      set -g @minimal_theme_text_color "#ebdbb2"
-      set -g @minimal_theme_accent_color "#83a598"
-      set -g @minimal_theme_border_color "#504945"
     '';
   };
 
