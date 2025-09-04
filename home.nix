@@ -60,7 +60,7 @@
       active_border_color = "#d3869b";
       inactive_border_color = "#665c54";
       foreground = "#ebdbb2";
-      background = "#000000";
+      background = "#1d2021";
       selection_foreground = "#928374";
       selection_background = "#ebdbb2";
       active_tab_foreground = "#fbf1c7";
