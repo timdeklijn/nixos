@@ -115,6 +115,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.ubuntu-mono
     nerd-fonts.daddy-time-mono
+    nerd-fonts.profont
   ];
 
   # use 1password
