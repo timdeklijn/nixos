@@ -30,6 +30,7 @@
     signal-desktop
     slack
     spotify
+    super-slicer
     vscode-fhs
   ];
   # Let Home Manager install and manage itself.
@@ -146,17 +147,9 @@
       pkgs.tmuxPlugins.gruvbox
     ];
     extraConfig = ''
-      # switch prefix to control-a, unmap b, allow double-a to go through
-      # allow reload of this file with PRE r
-      bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded."
-
       # remap split panes
       bind | split-window -h
       bind _ split-window -v
-
-      # vim style through windows (PRE Control-H/L)
-      # bind -r C-h select-window -t :-
-      # bind -r C-l select-window -t :+
 
       # vim style through resizing
       bind -r H resize-pane -L 5
