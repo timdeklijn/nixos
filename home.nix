@@ -1,5 +1,16 @@
 { config, pkgs, ... }:
-
+let
+  tmux-minimal-theme = pkgs.tmuxPlugins.mkTmuxPlugin {
+    pluginName = "tmux-minimal-theme";
+    version = "1.0";
+    src = pkgs.fetchFromGitHub {
+      owner = "binoymanoj";
+      repo = "tmux-minimal-theme";
+      rev = "29dad92c8a2486e5b6f116e42883906c00a1f0a2";
+      sha256 = "sha256-ymmCI6VYvf94Ot7h2GAboTRBXPIREP+EB33+px5aaJk=";
+    };
+  };
+in
 {
   home.username = "tim";
   home.homeDirectory = "/home/tim";
@@ -130,36 +141,18 @@
     enable = true;
     terminal = "screen-256color";
     historyLimit = 100000;
-    # plugins = with pkgs;
-    #   [
-    #     {
-    #       plugin = tmux-super-fingers;
-    #       extraConfig = "set -g @super-fingers-key f";
-    #     }
-    #     tmuxPlugins.better-mouse-mode
-    #   ];
+    clock24 = true;
+    keyMode = "vi";
+    mouse = true;
+    prefix = "C-a";
+    sensibleOnTop = true;
+    escapeTime = 1;
+    baseIndex = 1;
+    plugins = [ tmux-minimal-theme ];
     extraConfig = ''
       # switch prefix to control-a, unmap b, allow double-a to go through
-      set -g prefix C-a
-      unbind C-b
-      bind C-a send-prefix
-      #
       # allow reload of this file with PRE r
       bind r source-file ~/.tmux.conf \; display "Reloaded."
-
-      # colors
-      # set -g default-terminal "screen-256color"
-
-      # mouse mode (scrolling, etc)
-      # tmux 2.1
-      setw -g mouse on
-
-      # remove delay
-      set -sg escape-time 1
-
-      # set {window,pane} index to start at 1
-      set -g base-index 1
-      setw -g pane-base-index 1
 
       # remap split panes
       bind | split-window -h
