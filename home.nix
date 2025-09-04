@@ -148,7 +148,7 @@
     extraConfig = ''
       # switch prefix to control-a, unmap b, allow double-a to go through
       # allow reload of this file with PRE r
-      bind r source-file ~/.tmux.conf \; display "Reloaded."
+      bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded."
 
       # remap split panes
       bind | split-window -h
