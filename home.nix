@@ -174,14 +174,8 @@ in
       bind -r K resize-pane -U 5
       bind -r L resize-pane -R 5
 
-      set-option -g status-style bg=colour8,fg=colour255,bold
       set-option -g status-right ""
       set-option -g status-position top
-      # use vi mode
-      setw -g mode-keys vi
-      set -g status-keys vi
-      bind-key -Tcopy-mode-vi 'v' send -X begin-selection
-      bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
     '';
   };
 
