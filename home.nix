@@ -45,7 +45,7 @@
     settings = {
       background_opacity = 1.0;
       confirm_os_window_close = 0;
-      font_family = "ProFont IIx Nerd Font";
+      font_family = "ProFont IIx Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
