@@ -150,32 +150,41 @@ in
     baseIndex = 1;
     plugins = [ tmux-minimal-theme ];
     extraConfig = ''
-      # switch prefix to control-a, unmap b, allow double-a to go through
-      # allow reload of this file with PRE r
-      bind r source-file ~/.tmux.conf \; display "Reloaded."
+            # switch prefix to control-a, unmap b, allow double-a to go through
+            # allow reload of this file with PRE r
+            bind r source-file ~/.tmux.conf \; display "Reloaded."
 
-      # remap split panes
-      bind | split-window -h
-      bind _ split-window -v
+            # remap split panes
+            bind | split-window -h
+            bind _ split-window -v
 
-      # vim style through panes
-      bind h select-pane -L
-      bind j select-pane -D
-      bind k select-pane -U
-      bind l select-pane -R
+            # vim style through panes
+            bind h select-pane -L
+            bind j select-pane -D
+            bind k select-pane -U
+            bind l select-pane -R
 
-      # vim style through windows (PRE Control-H/L)
-      bind -r C-h select-window -t :-
-      bind -r C-l select-window -t :+
+            # vim style through windows (PRE Control-H/L)
+            bind -r C-h select-window -t :-
+            bind -r C-l select-window -t :+
 
-      # vim style through resizing
-      bind -r H resize-pane -L 5
-      bind -r J resize-pane -D 5
-      bind -r K resize-pane -U 5
-      bind -r L resize-pane -R 5
+            # vim style through resizing
+            bind -r H resize-pane -L 5
+            bind -r J resize-pane -D 5
+            bind -r K resize-pane -U 5
+            bind -r L resize-pane -R 5
 
-      set-option -g status-right ""
-      set-option -g status-position top
+            set-option -g status-right ""
+            set-option -g status-position top
+
+            set -g @minimal_theme_bg_color "#1d2021"
+      set -g @minimal_theme_active_color "#83a598"
+      set -g @minimal_theme_inactive_color "#665c54"
+      set -g @minimal_theme_text_color "#ebdbb2"
+      set -g @minimal_theme_accent_color "#83a598"
+      set -g @minimal_theme_border_color "#504945"
+
+
     '';
   };
 
