@@ -45,11 +45,11 @@
     settings = {
       background_opacity = 1.0;
       confirm_os_window_close = 0;
-      font_family = "DaddyTimeMono Nerd Font Mono";
+      font_family = "ProFont IIx Nerd Font";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
-      font_size = "14.0";
+      font_size = "13.0";
       enable_audio_bell = "no";
       macos_titlebar_color = "background";
       cursor = "#928374";
@@ -126,7 +126,72 @@
     AddKeysToAgent yes
   '';
 
-  # TODO: configure tmux
+  programs.tmux = {
+    enable = true;
+    terminal = "screen-256color";
+    historyLimit = 100000;
+    # plugins = with pkgs;
+    #   [
+    #     {
+    #       plugin = tmux-super-fingers;
+    #       extraConfig = "set -g @super-fingers-key f";
+    #     }
+    #     tmuxPlugins.better-mouse-mode
+    #   ];
+    extraConfig = ''
+      # switch prefix to control-a, unmap b, allow double-a to go through
+      set -g prefix C-a
+      unbind C-b
+      bind C-a send-prefix
+      #
+      # allow reload of this file with PRE r
+      bind r source-file ~/.tmux.conf \; display "Reloaded."
+
+      # colors
+      # set -g default-terminal "screen-256color"
+
+      # mouse mode (scrolling, etc)
+      # tmux 2.1
+      setw -g mouse on
+
+      # remove delay
+      set -sg escape-time 1
+
+      # set {window,pane} index to start at 1
+      set -g base-index 1
+      setw -g pane-base-index 1
+
+      # remap split panes
+      bind | split-window -h
+      bind _ split-window -v
+
+      # vim style through panes
+      bind h select-pane -L
+      bind j select-pane -D
+      bind k select-pane -U
+      bind l select-pane -R
+
+      # vim style through windows (PRE Control-H/L)
+      bind -r C-h select-window -t :-
+      bind -r C-l select-window -t :+
+
+      # vim style through resizing
+      bind -r H resize-pane -L 5
+      bind -r J resize-pane -D 5
+      bind -r K resize-pane -U 5
+      bind -r L resize-pane -R 5
+
+      set-option -g status-style bg=colour8,fg=colour255,bold
+      set-option -g status-right ""
+      set-option -g status-position top
+      # use vi mode
+      setw -g mode-keys vi
+      set -g status-keys vi
+      bind-key -Tcopy-mode-vi 'v' send -X begin-selection
+      bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+    '';
+  };
+
   # TODO: configure vscode
 
   services.gpg-agent = {
