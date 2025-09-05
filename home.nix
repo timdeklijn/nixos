@@ -128,7 +128,7 @@
     # This should help being able to use git within devcontainers withou
     # running this command manually.
     initContent = ''
-      ssh-add $HOME/.ssh/id_rsa
+      ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
     '';
   };
 
