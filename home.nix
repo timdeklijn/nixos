@@ -14,7 +14,7 @@
     git-lfs
     just
     kitty
-    neofetch
+    fastfetch
     nixfmt-rfc-style
     ripgrep
     starship
@@ -24,6 +24,7 @@
     zoxide
 
     # 'GUI' programs
+    audacity
     citrix_workspace # needs a manual download due to enduser license agreements
     dropbox
     obsidian
@@ -124,6 +125,11 @@
       ls = "eza";
       ll = "eza -la";
     };
+    # This should help being able to use git within devcontainers withou
+    # running this command manually.
+    initExtra = ''
+      ssh-add $HOME/.ssh/id_rsa
+    '';
   };
 
   # Make sure that I can use my ssh settings while in a devcontianer:
