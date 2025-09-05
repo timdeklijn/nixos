@@ -125,11 +125,11 @@
       ls = "eza";
       ll = "eza -la";
     };
-    # This should help being able to use git within devcontainers withou
-    # running this command manually.
-    initContent = ''
-      ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
-    '';
+    # # This should help being able to use git within devcontainers withou
+    # # running this command manually.
+    # initContent = ''
+    #   ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
+    # '';
   };
 
   # Make sure that I can use my ssh settings while in a devcontianer:
