@@ -45,7 +45,7 @@
     # These settings are simply copied from my kitty config.
     settings = {
       # Fonts
-      font_family = "ProFont IIx Nerd Font Mono";
+      font_family = "CaskaydiaMono Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";

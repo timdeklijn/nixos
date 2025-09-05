@@ -116,7 +116,6 @@
     nerd-fonts.ubuntu-mono
     nerd-fonts.daddy-time-mono
     nerd-fonts.profont
-    # nerd-fonts.caskaydia-code
     nerd-fonts.caskaydia-mono
   ];
 
