@@ -65,16 +65,19 @@
       num-workspaces = 4;
     };
     "org/gnome/desktop/wm/keybindings" = {
+      # Clear the default bindings to prevent conflicts with Dash to Panel
       switch-to-application-1 = [ ];
       switch-to-application-2 = [ ];
       switch-to-application-3 = [ ];
       switch-to-application-4 = [ ];
 
+      # These bindings will now correctly switch to workspaces
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-2 = [ "<Super>2" ];
       switch-to-workspace-3 = [ "<Super>3" ];
       switch-to-workspace-4 = [ "<Super>4" ];
 
+      # Your existing move-to-workspace bindings are correct
       move-to-workspace-1 = [ "<Shift><Super>1" ];
       move-to-workspace-2 = [ "<Shift><Super>2" ];
       move-to-workspace-3 = [ "<Shift><Super>3" ];
@@ -96,8 +99,8 @@
       event-sounds = false;
     };
     "org/gnome/shell/extensions/dash-to-panel" = {
-      panel-position = "TOP"; # TOP, LEFT, RIGHT, BOTTOM
-      panel-size = 30; # pixels
+      panel-position = "BOTTOM"; # TOP, LEFT, RIGHT, BOTTOM
+      panel-size = 25; # pixels
       show-show-apps-button = true;
       intellihide = false; # auto-hide when windows overlap
       isolate-monitors = false; # single unified panel
