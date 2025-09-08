@@ -48,24 +48,38 @@
     enable = true;
   };
 
-  environment.variables = {
-    KWIN_DRM_PREFER_COLOR_DEPTH = "24";
-  };
+  # services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
-  # Use KDE Plasma as desktop environment
-  services = {
-    desktopManager.plasma6 = {
-      enable = true;
-    };
-    displayManager = {
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-      };
-      defaultSession = "plasma";
-    };
+  # To disable installing GNOME's suite of applications
+  # and only be left with GNOME shell.
+  services.gnome.core-apps.enable = true;
+  services.gnome.core-developer-tools.enable = false;
+  services.gnome.games.enable = false;
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour
+    gnome-user-docs
+  ];
 
-  };
+  # environment.variables = {
+  #   KWIN_DRM_PREFER_COLOR_DEPTH = "24";
+  # };
+
+  # # Use KDE Plasma as desktop environment
+  # services = {
+  #   desktopManager.plasma6 = {
+  #     enable = true;
+  #   };
+  #   displayManager = {
+  #     sddm = {
+  #       enable = true;
+  #       wayland.enable = true;
+  #     };
+  #     defaultSession = "plasma";
+  #   };
+
+  # };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -123,6 +137,10 @@
     polkitPolicyOwners = [ "tim" ];
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "libsoup-2.74.3"
+  ];
+
   # Global packages
   environment.systemPackages = with pkgs; [
     # Follow this:
@@ -140,7 +158,7 @@
     enable = true;
     extraPackages = [ pkgs.openssh ];
   };
-  programs.ssh.startAgent = true;
+  # programs.ssh.startAgent = true;
 
   # This is required to get the right drivers fro my framework laptop
   services.fwupd.enable = true;
