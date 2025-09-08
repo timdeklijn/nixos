@@ -64,6 +64,15 @@
       # set fixed number of workspaces
       num-workspaces = 4;
     };
+    "org/gnome/shell/extensions/dash-to-panel" = {
+      panel-position = "BOTTOM"; # TOP, LEFT, RIGHT, BOTTOM
+      panel-size = 25; # pixels
+      show-show-apps-button = true;
+      intellihide = false; # auto-hide when windows overlap
+      isolate-monitors = false; # single unified panel
+      show-appmenu = false; # hide the old app menu
+      show-app-number-on-launch-icons = false;
+    };
     "org/gnome/desktop/wm/keybindings" = {
       # Clear the default bindings to prevent conflicts with Dash to Panel
       switch-to-application-1 = [ ];
@@ -97,15 +106,6 @@
     };
     "org/gnome/desktop/sound" = {
       event-sounds = false;
-    };
-    "org/gnome/shell/extensions/dash-to-panel" = {
-      panel-position = "BOTTOM"; # TOP, LEFT, RIGHT, BOTTOM
-      panel-size = 25; # pixels
-      show-show-apps-button = true;
-      intellihide = false; # auto-hide when windows overlap
-      isolate-monitors = false; # single unified panel
-      show-appmenu = false; # hide the old app menu
-      show-app-number-on-launch-icons = false;
     };
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false; # Set to false to reverse "natural" scrolling
