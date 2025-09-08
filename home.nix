@@ -32,13 +32,34 @@
     spotify
     variety
     vscode-fhs
+
     gnome-tweaks
+    gnomeExtensions.appindicator
   ];
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 
   programs.firefox.enable = true;
+
+  dconf.settings = {
+    "org/gnome/shell" = {
+      disable-user-extensions = false;
+      enable-extension = [
+        "appindicatorsupport@rgcjonas.gmail.com"
+      ];
+    };
+    "org/gnome/desktop/interface" = {
+      clock-format = "24h";
+      clock-show-weekday = true;
+      enable-animations = true;
+      text-scaling-factor = 1.25;
+      enable-hot-corners = false;
+    };
+    "org/gnome/desktop/sound" = {
+      event-sounds = false;
+    };
+  };
 
   programs.kitty = {
     enable = true;
