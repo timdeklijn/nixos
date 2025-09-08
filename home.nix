@@ -35,6 +35,10 @@
 
     gnome-tweaks
     gnomeExtensions.appindicator
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.appindicator
+    gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.vitals
   ];
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -47,7 +51,30 @@
       disable-user-extensions = false;
       enable-extension = [
         "appindicatorsupport@rgcjonas.gmail.com"
+        "dash-to-panel@jderose9.github.com"
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "sound-output-device-chooser@kgshank.net"
+        "Vitals@CoreCoding.com"
       ];
+    };
+    "org/gnome/mutter" = {
+      # disable dynamic workspaces
+      dynamic-workspaces = false;
+      # set fixed number of workspaces
+      num-workspaces = 4;
+    };
+    "org/gnome/desktop/wm/keybindings" = {
+      # Switch to a specific workspace (Super+1..6)
+      switch-to-workspace-1 = [ "<Super>1" ];
+      switch-to-workspace-2 = [ "<Super>2" ];
+      switch-to-workspace-3 = [ "<Super>3" ];
+      switch-to-workspace-4 = [ "<Super>4" ];
+
+      # Move the active window to a specific workspace (Shift+Super+1..6)
+      move-to-workspace-1 = [ "<Shift><Super>1" ];
+      move-to-workspace-2 = [ "<Shift><Super>2" ];
+      move-to-workspace-3 = [ "<Shift><Super>3" ];
+      move-to-workspace-4 = [ "<Shift><Super>4" ];
     };
     "org/gnome/desktop/interface" = {
       clock-format = "24h";
