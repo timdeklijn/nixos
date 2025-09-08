@@ -46,6 +46,7 @@
 
   programs.firefox.enable = true;
 
+  dconf.enable = true;
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
