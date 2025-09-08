@@ -77,6 +77,10 @@
       move-to-workspace-4 = [ "<Shift><Super>4" ];
     };
     "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark"; # Adwaita-dark
+      gtk-theme = "Adwaita-dark";
+      icon-theme = "Adwaita";
+      cursor-theme = "Adwaita";
       clock-format = "24h";
       clock-show-weekday = true;
       enable-animations = true;
