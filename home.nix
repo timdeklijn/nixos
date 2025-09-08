@@ -51,7 +51,7 @@
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
-      enable-extension = [
+      enabled-extension = [
         "appindicatorsupport@rgcjonas.gmail.com"
         "dash-to-panel@jderose9.github.com"
         "appindicatorsupport@rgcjonas.gmail.com"
