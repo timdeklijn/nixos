@@ -34,6 +34,8 @@
     vscode-fhs
 
     gnome-tweaks
+    dconf-editor # For debugging
+    gnome-shell-extensions
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
     gnomeExtensions.appindicator
