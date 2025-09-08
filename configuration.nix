@@ -61,25 +61,7 @@
     gnome-tour
     gnome-user-docs
   ];
-
-  # environment.variables = {
-  #   KWIN_DRM_PREFER_COLOR_DEPTH = "24";
-  # };
-
-  # # Use KDE Plasma as desktop environment
-  # services = {
-  #   desktopManager.plasma6 = {
-  #     enable = true;
-  #   };
-  #   displayManager = {
-  #     sddm = {
-  #       enable = true;
-  #       wayland.enable = true;
-  #     };
-  #     defaultSession = "plasma";
-  #   };
-
-  # };
+  services.flatpak.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
