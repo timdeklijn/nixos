@@ -26,10 +26,8 @@
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
-    dropbox
     obsidian
     orca-slicer
-    signal-desktop
     slack
     spotify
     variety
