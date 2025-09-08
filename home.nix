@@ -97,11 +97,14 @@
     };
     "org/gnome/shell/extensions/dash-to-panel" = {
       panel-position = "TOP"; # TOP, LEFT, RIGHT, BOTTOM
-      panel-size = 36; # pixels
+      panel-size = 30; # pixels
       show-show-apps-button = true;
-      intellihide = true; # auto-hide when windows overlap
+      intellihide = false; # auto-hide when windows overlap
       isolate-monitors = false; # single unified panel
       show-appmenu = false; # hide the old app menu
+    };
+    "org/gnome/desktop/peripherals/touchpad" = {
+      natural-scroll = false; # Set to false to reverse "natural" scrolling
     };
   };
 
