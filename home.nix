@@ -53,8 +53,9 @@
       clock-format = "24h";
       clock-show-weekday = true;
       enable-animations = true;
-      text-scaling-factor = 1.25;
+      text-scaling-factor = 1.0;
       enable-hot-corners = false;
+      show-battery-percentage = true;
     };
     "org/gnome/desktop/sound" = {
       event-sounds = false;
