@@ -114,9 +114,6 @@
   # download nerd fonts
   fonts.packages = with pkgs; [
     nerd-fonts.ubuntu-mono
-    nerd-fonts.daddy-time-mono
-    nerd-fonts.profont
-    nerd-fonts.caskaydia-mono
   ];
 
   # use 1password
