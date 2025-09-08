@@ -58,6 +58,9 @@
         "Vitals@CoreCoding.com"
       ];
     };
+    "org/gnome/settings-daemon/plugins/power" = {
+      ambient-enabled = false;
+    };
     "org/gnome/mutter" = {
       # disable dynamic workspaces
       dynamic-workspaces = false;
