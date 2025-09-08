@@ -114,7 +114,7 @@
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
-      font_size = "16.0";
+      font_size = "19.0";
 
       # Settings
       background_opacity = 0.9;
