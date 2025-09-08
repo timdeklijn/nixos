@@ -105,6 +105,7 @@
       intellihide = false; # auto-hide when windows overlap
       isolate-monitors = false; # single unified panel
       show-appmenu = false; # hide the old app menu
+      show-app-number-on-launch-icons = false;
     };
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false; # Set to false to reverse "natural" scrolling
