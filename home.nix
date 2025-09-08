@@ -32,6 +32,7 @@
     signal-desktop
     slack
     spotify
+    variety
     vscode-fhs
   ];
   # Let Home Manager install and manage itself.
