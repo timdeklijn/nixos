@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
     # Used for user packages and dotfiles
     home-manager = {
@@ -17,6 +18,7 @@
       self,
       nixpkgs,
       home-manager,
+      nix-flatpak,
       ...
     }@inputs:
 
@@ -26,6 +28,7 @@
         fw13 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            nix-flatpak.nixosModules.nix-flatpak
             ./configuration.nix
             home-manager.nixosModules.home-manager
             {

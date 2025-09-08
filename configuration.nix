@@ -61,7 +61,14 @@
     gnome-tour
     gnome-user-docs
   ];
-  services.flatpak.enable = true;
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "com.dropbox.Client"
+      "org.signal.Signal"
+    ];
+  };
+
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
     path = [ pkgs.flatpak ];
