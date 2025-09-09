@@ -36,7 +36,6 @@
     gnome-shell-extensions
     gnome-tweaks
     gnomeExtensions.appindicator
-    gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
     gnomeExtensions.search-light
     gnomeExtensions.sound-output-device-chooser
@@ -53,10 +52,11 @@
     "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = [
+        "Vitals@CoreCoding.com"
         "appindicatorsupport@rgcjonas.gmail.com"
         "dash-to-panel@jderose9.github.com"
+        "search-light@icedman.org"
         "sound-output-device-chooser@kgshank.net"
-        "Vitals@CoreCoding.com"
       ];
     };
     "org/gnome/settings-daemon/plugins/power" = {
