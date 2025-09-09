@@ -76,12 +76,20 @@
       show-appmenu = false; # hide the old app menu
       show-app-number-on-launch-icons = false;
     };
-    "org/gnome/desktop/wm/keybindings" = {
-      # Clear the default bindings to prevent conflicts with Dash to Panel
+    # This block clears the application switch bindings
+    "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [ ];
       switch-to-application-2 = [ ];
       switch-to-application-3 = [ ];
       switch-to-application-4 = [ ];
+      switch-to-application-5 = [ ];
+      switch-to-application-6 = [ ];
+      switch-to-application-7 = [ ];
+      switch-to-application-8 = [ ];
+      switch-to-application-9 = [ ];
+      switch-to-application-10 = [ ];
+    };
+    "org/gnome/desktop/wm/keybindings" = {
 
       # These bindings will now correctly switch to workspaces
       switch-to-workspace-1 = [ "<Super>1" ];
