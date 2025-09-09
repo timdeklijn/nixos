@@ -131,11 +131,11 @@
     # These settings are simply copied from my kitty config.
     settings = {
       # Fonts
-      font_family = "UbuntuMono Nerd Font Mono";
+      font_family = "MonaspiceKr Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
-      font_size = "19.0";
+      font_size = "17.0";
 
       # Settings
       background_opacity = 0.9;
