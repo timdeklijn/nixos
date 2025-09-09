@@ -33,11 +33,12 @@
     variety
     vscode-fhs
 
-    gnome-tweaks
     gnome-shell-extensions
+    gnome-tweaks
+    gnomeExtensions.appindicator
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
-    gnomeExtensions.appindicator
+    gnomeExtensions.search-light
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.vitals
   ];
@@ -120,6 +121,9 @@
     };
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false; # Set to false to reverse "natural" scrolling
+    };
+    "org/gnome/shell/extensions/search-light" = {
+      hotkey = "<Super>space";
     };
   };
 
