@@ -65,6 +65,7 @@
       dynamic-workspaces = false;
       # set fixed number of workspaces
       num-workspaces = 4;
+      experimental-features = [ "scale-monitor-framebuffer" ];
     };
     "org/gnome/shell/extensions/dash-to-panel" = {
       panel-position = "TOP"; # TOP, LEFT, RIGHT, BOTTOM
