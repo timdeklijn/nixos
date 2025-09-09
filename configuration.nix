@@ -124,6 +124,7 @@
   # download nerd fonts
   fonts.packages = with pkgs; [
     nerd-fonts.ubuntu-mono
+    nerd-fonts.monaspace
   ];
 
   # use 1password
