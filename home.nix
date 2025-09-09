@@ -78,6 +78,7 @@
       isolate-monitors = true; # single unified panel
       show-appmenu = false; # hide the old app menu
       show-app-number-on-launch-icons = false;
+      panel-monitor = -1;
     };
     # This block clears the application switch bindings
     "org/gnome/shell/keybindings" = {
