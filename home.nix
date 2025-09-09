@@ -37,6 +37,7 @@
     gnome-tweaks
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
+    gnomeExtensions.focus-follows-workspace
     gnomeExtensions.search-light
     gnomeExtensions.vitals
   ];
@@ -55,6 +56,7 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "dash-to-panel@jderose9.github.com"
         "search-light@icedman.org"
+        "focus-follows-workspace@christopher.luebbemeier.gmail.com"
       ];
     };
     "org/gnome/settings-daemon/plugins/power" = {
@@ -66,6 +68,7 @@
       # set fixed number of workspaces
       num-workspaces = 4;
       experimental-features = [ "scale-monitor-framebuffer" ];
+      workspaces-only-on-primary = true;
     };
     "org/gnome/shell/extensions/dash-to-panel" = {
       panel-position = "TOP"; # TOP, LEFT, RIGHT, BOTTOM
