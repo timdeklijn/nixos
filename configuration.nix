@@ -12,10 +12,14 @@
     "flakes"
   ];
 
+  hardware.enableRedistributableFirmware = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelParams = [ "amdgpu.dcdebugmask=0x10" ];
+  services.power-profiles-daemon.enable = true;
 
   networking.hostName = "fw13"; # Define your hostname.
   networking.networkmanager.enable = true;
