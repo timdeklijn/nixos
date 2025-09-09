@@ -2,15 +2,16 @@
   description = "A simple NixOS serving as entrypoint for my NixOS configuration.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Used for user packages and dotfiles
     home-manager = {
       # Follow corresponding `release` branch from Home Manager
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs =
