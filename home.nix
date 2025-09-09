@@ -68,7 +68,7 @@
       num-workspaces = 4;
     };
     "org/gnome/shell/extensions/dash-to-panel" = {
-      panel-position = "BOTTOM"; # TOP, LEFT, RIGHT, BOTTOM
+      panel-position = "TOP"; # TOP, LEFT, RIGHT, BOTTOM
       panel-size = 25; # pixels
       show-show-apps-button = true;
       intellihide = false; # auto-hide when windows overlap
