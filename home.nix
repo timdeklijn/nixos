@@ -128,7 +128,7 @@
     # These settings are simply copied from my kitty config.
     settings = {
       # Fonts
-      font_family = "MonaspiceKr Nerd Font Mono";
+      font_family = "MonaspiceAr Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
