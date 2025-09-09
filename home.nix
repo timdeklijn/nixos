@@ -38,7 +38,6 @@
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
     gnomeExtensions.search-light
-    gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.vitals
   ];
   # Let Home Manager install and manage itself.
@@ -56,7 +55,6 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "dash-to-panel@jderose9.github.com"
         "search-light@icedman.org"
-        "sound-output-device-chooser@kgshank.net"
       ];
     };
     "org/gnome/settings-daemon/plugins/power" = {
@@ -122,9 +120,9 @@
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false; # Set to false to reverse "natural" scrolling
     };
-    "org/gnome/shell/extensions/search-light" = {
-      hotkey = "<Super>space";
-    };
+    # "org/gnome/shell/extensions/search-light" = {
+    #   hotkey = "<Super>space";
+    # };
   };
 
   programs.kitty = {
