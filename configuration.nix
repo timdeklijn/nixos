@@ -12,11 +12,14 @@
     "flakes"
   ];
 
+  # Help with instability in wifi and OS
   hardware.enableRedistributableFirmware = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Help with instability in wifi and OS
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [ "amdgpu.dcdebugmask=0x10" ];
   services.power-profiles-daemon.enable = true;

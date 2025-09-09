@@ -69,10 +69,10 @@
     };
     "org/gnome/shell/extensions/dash-to-panel" = {
       panel-position = "TOP"; # TOP, LEFT, RIGHT, BOTTOM
-      panel-size = 25; # pixels
+      panel-size = 35; # pixels
       show-show-apps-button = true;
       intellihide = false; # auto-hide when windows overlap
-      isolate-monitors = false; # single unified panel
+      isolate-monitors = true; # single unified panel
       show-appmenu = false; # hide the old app menu
       show-app-number-on-launch-icons = false;
     };
@@ -121,9 +121,6 @@
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false; # Set to false to reverse "natural" scrolling
     };
-    # "org/gnome/shell/extensions/search-light" = {
-    #   hotkey = "<Super>space";
-    # };
   };
 
   programs.kitty = {
