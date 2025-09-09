@@ -132,13 +132,14 @@
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
-      font_size = "17.0";
+      font_size = "15.0";
 
       # Settings
-      background_opacity = 0.9;
+      background_opacity = 0.95;
       confirm_os_window_close = 0;
       enable_audio_bell = "no";
       macos_titlebar_color = "background";
+      linux_display_server = "x11";
 
       background = "#1d2021";
       foreground = "#d4be98";
