@@ -1,10 +1,8 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   ...
 }:
-
 {
   home.username = "tim";
   home.homeDirectory = "/home/tim";

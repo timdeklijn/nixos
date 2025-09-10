@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Used for user packages and dotfiles
     home-manager = {
@@ -18,7 +17,6 @@
     {
       self,
       nixpkgs,
-      nixpkgs-unstable,
       home-manager,
       nix-flatpak,
       ...
@@ -35,7 +33,7 @@
             {
               home-manager.useGlobalPkgs = true;
               # home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
+              # home-manager.extraSpecialArgs = { inherit inputs; };
               # TODO: this import can be something different I think
               home-manager.users.tim = ./home.nix;
             }
