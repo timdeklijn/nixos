@@ -26,6 +26,8 @@
     wget
     zoxide
 
+    nixd
+
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
@@ -184,6 +186,9 @@
     # This should be set to true, even if it is set to configuration.nix.
     enable = true;
 
+    # enableCompletions = true;
+    # autosuggestion.enable = true;
+    # syntaxHighlighting.enable = true;
     # enable suggestions, completions and highlighting
     autosuggestion.enable = true;
     enableCompletion = true;
