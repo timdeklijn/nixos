@@ -234,17 +234,7 @@
       pkgs.tmuxPlugins.tmux-nova
     ];
     extraConfig = ''
-      # remap split panes
-      bind | split-window -h
-      bind _ split-window -v
-
-      # vim style through resizing
-      bind -r H resize-pane -L 5
-      bind -r J resize-pane -D 5
-      bind -r K resize-pane -U 5
-      bind -r L resize-pane -R 5
-
-      set -g @plugin 'o0th/tmux-nova'
+      set-option -g status-position bottom
 
       set -g @nova-nerdfonts true
       set -g @nova-nerdfonts-left 
@@ -262,7 +252,16 @@
       set -g @nova-segments-0-left "mode"
       set -g @nova-segments-0-right "whoami"
 
-      set-option -g status-position bottom
+      # remap split panes
+      bind | split-window -h
+      bind _ split-window -v
+
+      # vim style through resizing
+      bind -r H resize-pane -L 5
+      bind -r J resize-pane -D 5
+      bind -r K resize-pane -U 5
+      bind -r L resize-pane -R 5
+
     '';
   };
 
