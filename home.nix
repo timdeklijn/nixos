@@ -231,7 +231,7 @@
     baseIndex = 1;
     plugins = [
       pkgs.tmuxPlugins.vim-tmux-navigator
-      pkgs.tmuxPlugins.gruvbox
+      pkgs.tmuxPlugins.tmux-colors-solarized
     ];
     extraConfig = ''
       # remap split panes
@@ -244,6 +244,7 @@
       bind -r K resize-pane -U 5
       bind -r L resize-pane -R 5
 
+      set -g @colors-solarized 'dark'
       set-option -g status-position bottom
     '';
   };
