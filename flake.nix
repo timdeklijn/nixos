@@ -23,17 +23,6 @@
       nix-flatpak,
       ...
     }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      unstable = import nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
-      };
-    in
     {
       # Describe my system
       nixosConfigurations = {
@@ -46,7 +35,7 @@
             {
               home-manager.useGlobalPkgs = true;
               # home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit unstable; };
+              home-manager.extraSpecialArgs = { inherit inputs; };
               # TODO: this import can be something different I think
               home-manager.users.tim = ./home.nix;
             }
