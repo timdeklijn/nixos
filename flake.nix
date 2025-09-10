@@ -35,7 +35,7 @@
               # home-manager.useUserPackages = true;
               # home-manager.extraSpecialArgs = { inherit inputs; };
               # TODO: this import can be something different I think
-              home-manager.users.tim = ./home.nix;
+              home-manager.users.tim = import ./home.nix;
             }
           ];
         };
