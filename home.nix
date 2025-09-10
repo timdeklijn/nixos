@@ -244,7 +244,7 @@
       bind -r K resize-pane -U 5
       bind -r L resize-pane -R 5
 
-      set -g @colors-solarized 'dark'
+      set -g @colors-solarized '256'
       set-option -g status-position bottom
     '';
   };
