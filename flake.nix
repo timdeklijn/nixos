@@ -2,7 +2,7 @@
   description = "A simple NixOS serving as entrypoint for my NixOS configuration.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
 
     # Used for user packages and dotfiles
     home-manager = {
