@@ -244,6 +244,8 @@
       bind -r K resize-pane -U 5
       bind -r L resize-pane -R 5
 
+      set -g @plugin 'o0th/tmux-nova'
+
       set -g @nova-nerdfonts true
       set -g @nova-nerdfonts-left 
       set -g @nova-nerdfonts-right 
