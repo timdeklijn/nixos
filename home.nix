@@ -186,8 +186,10 @@
     # This should be set to true, even if it is set to configuration.nix.
     enable = true;
 
+    autocd = true;
+    enableAutosuggestions = true;
     # enable suggestions, completions and highlighting
-    autosuggestion.enable = true;
+    # autosuggestion.enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
 
