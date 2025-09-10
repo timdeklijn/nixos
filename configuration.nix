@@ -135,11 +135,11 @@
   ];
 
   # use 1password
-  # programs._1password.enable = true;
-  # programs._1password-gui = {
-  #   enable = true;
-  #   polkitPolicyOwners = [ "tim" ];
-  # };
+  programs._1password.enable = true;
+  programs._1password-gui = {
+    enable = true;
+    polkitPolicyOwners = [ "tim" ];
+  };
 
   nixpkgs.config.permittedInsecurePackages = [
     "libsoup-2.74.3"
