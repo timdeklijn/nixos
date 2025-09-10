@@ -197,7 +197,7 @@
     syntaxHighlighting.enable = true;
 
     # Save zsh config files here.
-    dotDir = "${config.xdg.configHome}/zsh";
+    dotDir = ".config/zsh";
 
     # Add my zsh aliases. Requires `eza`.
     shellAliases = {
