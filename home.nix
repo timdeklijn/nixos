@@ -148,7 +148,7 @@
       macos_titlebar_color = "background";
       linux_display_server = "x11";
 
-      background = "#001e26";
+      background = "#001d26";
       foreground = "#708183";
       cursor = "#708183";
       selection_background = "#002731";
@@ -231,7 +231,7 @@
     baseIndex = 1;
     plugins = [
       pkgs.tmuxPlugins.vim-tmux-navigator
-      pkgs.tmuxPlugins.tmux-colors-solarized
+      pkgs.tmuxPlugins.tmux-nova
     ];
     extraConfig = ''
       # remap split panes
@@ -244,7 +244,22 @@
       bind -r K resize-pane -U 5
       bind -r L resize-pane -R 5
 
-      set -g @colors-solarized '256'
+      set -g @nova-nerdfonts true
+      set -g @nova-nerdfonts-left 
+      set -g @nova-nerdfonts-right 
+
+      set -g @nova-segment-mode "#{?client_prefix,Ω,ω}"
+      set -g @nova-segment-mode-colors "#50fa7b #282a36"
+
+      set -g @nova-segment-whoami "#(whoami)@#h"
+      set -g @nova-segment-whoami-colors "#50fa7b #282a36"
+
+      set -g @nova-pane "#I#{?pane_in_mode,  #{pane_mode},}  #W"
+
+      set -g @nova-rows 0
+      set -g @nova-segments-0-left "mode"
+      set -g @nova-segments-0-right "whoami"
+
       set-option -g status-position bottom
     '';
   };
