@@ -6,7 +6,6 @@
 
     # Used for user packages and dotfiles
     home-manager = {
-      # Follow corresponding `release` branch from Home Manager
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -34,8 +33,9 @@
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
               # TODO: this import can be something different I think
-              home-manager.users."tim" = import ./home.nix;
+              home-manager.users.tim = ./home.nix;
             }
           ];
         };
