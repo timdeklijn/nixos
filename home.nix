@@ -36,7 +36,7 @@
     slack
     spotify
     variety
-    # vscode-fhs
+    vscode-fhs
 
     gnome-shell-extensions
     gnome-tweaks
