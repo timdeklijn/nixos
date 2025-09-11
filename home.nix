@@ -36,7 +36,7 @@
     slack
     spotify
     variety
-    vscode-fhs
+    # vscode-fhs
 
     gnome-shell-extensions
     gnome-tweaks
@@ -51,6 +51,14 @@
   systemd.user.startServices = "sd-switch";
 
   programs.firefox.enable = true;
+
+  programs.vscode.package = pkgs.vscode.fhsWithPackages (
+    ps: with ps; [
+      openssl.dev
+      pkg-config
+      patched-openssh
+    ]
+  );
 
   dconf.enable = true;
   dconf.settings = {
