@@ -15,7 +15,6 @@
         jnoortheen.nix-ide
         johnpapa.vscode-peacock
         mechatroner.rainbow-csv
-        # ms-azuretools.vscode-containers
         ms-azuretools.vscode-docker
         ms-python.black-formatter
         ms-python.debugpy
@@ -31,7 +30,6 @@
         ms-vscode-remote.remote-containers
         ms-vscode-remote.remote-ssh
         ms-vscode-remote.remote-ssh-edit
-        # ms-vscode.remote-explorer
         myriad-dreamin.tinymist
         nefrob.vscode-just-syntax
         redhat.vscode-yaml
@@ -40,7 +38,7 @@
         tamasfe.even-better-toml
       ];
       userSettings = {
-        "editor.fontFamily" = "'MonaspiceNe Nerd Font Mono', monospace";
+        "editor.fontFamily" = "'JetBrainsMono Nerd Font Mono', monospace";
         "editor.fontLigatures" = true;
         "editor.fontSize" = 14;
         "editor.lineHeight" = 1.2;
@@ -55,9 +53,9 @@
         "editor.scrollbar.horizontal" = "hidden";
         "editor.glyphMargin" = true;
         "editor.folding" = false;
-        "debug.console.fontFamily" = "MonaspiceNe Nerd Font Mono";
+        "debug.console.fontFamily" = "JetBrainsMono Nerd Font Mono";
         "debug.console.fontSize" = 14;
-        "terminal.integrated.fontFamily" = "'MonaspiceNe Nerd Font Mono'";
+        "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font Mono'";
         "terminal.integrated.fontSize" = 14;
         "terminal.integrated.fontWeight" = "500";
         "terminal.integrated.tabs.location" = "left";
