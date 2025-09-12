@@ -151,6 +151,12 @@
     # https://wiki.nixos.org/wiki/Displaylink
     # there is a manual step to download the package in there.
     displaylink
+    qmk
+  ];
+
+  hardware.keyboard.qmk.enable = true;
+  services.udev.packages = with pkgs; [
+    qmk-udev-rules
   ];
 
   # Enable the OpenSSH daemon.
