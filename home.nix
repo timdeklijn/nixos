@@ -36,7 +36,7 @@
     slack
     spotify
     variety
-    vscode-fhs
+    # vscode-fhs
 
     gnome-shell-extensions
     gnome-tweaks
@@ -46,6 +46,11 @@
     gnomeExtensions.search-light
     gnomeExtensions.vitals
   ];
+
+  imports = [
+    ./applications/vscode.nix
+  ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
