@@ -77,10 +77,10 @@
     };
     "org/gnome/shell/extensions/dash-to-panel" = {
       panel-position = "TOP"; # TOP, LEFT, RIGHT, BOTTOM
-      panel-size = 35; # pixels
+      panel-size = 25; # pixels
       show-show-apps-button = true;
       intellihide = false; # auto-hide when windows overlap
-      isolate-monitors = true; # single unified panel
+      isolate-monitors = false; # single unified panel
       show-appmenu = false; # hide the old app menu
       show-app-number-on-launch-icons = false;
       panel-monitor = -1;
