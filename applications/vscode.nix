@@ -53,9 +53,9 @@
         "editor.scrollbar.horizontal" = "hidden";
         "editor.glyphMargin" = true;
         "editor.folding" = false;
-        "debug.console.fontFamily" = "JetBrainsMono Nerd Font Mono";
+        "debug.console.fontFamily" = "'JetBrainsMono Nerd Font Mono', monospace";
         "debug.console.fontSize" = 14;
-        "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font Mono'";
+        "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font Mono', monospace";
         "terminal.integrated.fontSize" = 14;
         "terminal.integrated.fontWeight" = "500";
         "terminal.integrated.tabs.location" = "left";
