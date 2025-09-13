@@ -91,8 +91,9 @@
           "(builtins.getFlake \"/path/to/flake.nix\").nixosConfigurations.<name>.options.home-manager.users.type.getSubOptions []";
         "nix.serverSettings.options.nixos.expr" =
           "(builtins.getFlake \"/path/to/flake.nix\").nixosConfigurations.<name>.options";
-        "terminal.integrated.defaultProfile.linux" = "null";
-        "terminal.integrated.shell.linux" = "/run/current-system/sw/bin/bash";
+        # "terminal.integrated.defaultProfile.linux" = "null";
+        # "terminal.integrated.shell.linux" = "/run/current-system/sw/bin/bash";
+        "terminal.integrated.shellIntegration.enabled" = false;
       };
       keybindings = [
         {
