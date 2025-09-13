@@ -197,6 +197,8 @@
     # This should be set to true, even if it is set to configuration.nix.
     enable = true;
 
+    initExtra = "source $HOME/.config/.zshrc";
+
     autocd = true;
     autosuggestion.enable = true;
     enableCompletion = true;
