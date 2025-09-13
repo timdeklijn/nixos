@@ -14,6 +14,7 @@
         elixir-lsp.vscode-elixir-ls
         jnoortheen.nix-ide
         johnpapa.vscode-peacock
+        tal7aouy.icons
         mechatroner.rainbow-csv
         ms-azuretools.vscode-docker
         ms-python.black-formatter
