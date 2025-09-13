@@ -197,8 +197,6 @@
     # This should be set to true, even if it is set to configuration.nix.
     enable = true;
 
-    initExtra = "source $HOME/.config/.zshrc";
-
     autocd = true;
     autosuggestion.enable = true;
     enableCompletion = true;
@@ -226,6 +224,7 @@
     initContent = ''
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
       # ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
+      "source $HOME/.config/.zshrc"
     '';
   };
 
