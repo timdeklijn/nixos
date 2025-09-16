@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     # command line utilities
     btop
+    delta
     direnv
     eza
     fzf
