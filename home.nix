@@ -222,6 +222,10 @@
   # Make sure that I can use my ssh settings while in a devcontianer:
   home.file.".ssh/config".text = ''
     AddKeysToAgent yes
+    HOST gitlab.com
+        Hostname altssh.gitlab.com
+        User git
+        Port 443
   '';
 
   programs.tmux = {
