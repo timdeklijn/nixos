@@ -65,7 +65,6 @@
       enabled-extensions = [
         "Vitals@CoreCoding.com"
         "appindicatorsupport@rgcjonas.gmail.com"
-        "dash-to-panel@jderose9.github.com"
         "search-light@icedman.org"
         "focus-follows-workspace@christopher.luebbemeier.gmail.com"
         "openbar@neuromorph"
@@ -81,16 +80,6 @@
       num-workspaces = 4;
       experimental-features = [ "scale-monitor-framebuffer" ];
       workspaces-only-on-primary = true;
-    };
-    "org/gnome/shell/extensions/dash-to-panel" = {
-      panel-position = "TOP"; # TOP, LEFT, RIGHT, BOTTOM
-      panel-size = 25; # pixels
-      show-show-apps-button = true;
-      intellihide = false; # auto-hide when windows overlap
-      isolate-monitors = false; # single unified panel
-      show-appmenu = false; # hide the old app menu
-      show-app-number-on-launch-icons = false;
-      panel-monitor = -1;
     };
     # This block clears the application switch bindings
     "org/gnome/shell/keybindings" = {
