@@ -1,7 +1,11 @@
 {
   pkgs,
+  # myFont,
   ...
 }:
+let
+  myFont = "Hack Nerd Font Mono";
+in
 {
   programs.vscode = {
     enable = true;
@@ -39,7 +43,7 @@
         tamasfe.even-better-toml
       ];
       userSettings = {
-        "editor.fontFamily" = "'JetBrainsMono Nerd Font Mono', monospace";
+        "editor.fontFamily" = "'${myFont}', monospace";
         "editor.fontLigatures" = true;
         "editor.fontSize" = 14;
         "editor.lineHeight" = 1.3;
@@ -54,9 +58,9 @@
         "editor.scrollbar.horizontal" = "hidden";
         "editor.glyphMargin" = true;
         "editor.folding" = false;
-        "debug.console.fontFamily" = "'JetBrainsMono Nerd Font Mono', monospace";
+        "debug.console.fontFamily" = "'${myFont}', monospace";
         "debug.console.fontSize" = 14;
-        "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font Mono', monospace";
+        "terminal.integrated.fontFamily" = "'${myFont}', monospace";
         "terminal.integrated.fontSize" = 14;
         "terminal.integrated.fontWeight" = "500";
         "terminal.integrated.tabs.location" = "left";
