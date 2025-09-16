@@ -21,10 +21,8 @@
 
   # Help with instability in wifi and OS
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  # initcall_blacklist is added to fix gnome freezing after login (AMD issue).
   boot.kernelParams = [
     "amdgpu.dcdebugmask=0x10"
-    "initcall_blacklist=simpledrm_platform_driver_init"
   ];
   services.power-profiles-daemon.enable = true;
 
@@ -53,11 +51,20 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver = {
     videoDrivers = [
+      "amd"
       "displaylink"
       "modesetting"
     ];
     enable = true;
   };
+
+  # should help freezing on startup
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport32Bit = true;
+  hardware.opengl.extraPackages = with pkgs; [
+    amdvlk # Or another vulkan driver like radeon-vulkan
+    mesa
+  ];
 
   # services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
@@ -158,11 +165,6 @@
     # there is a manual step to download the package in there.
     displaylink
     qmk
-  ];
-
-  hardware.keyboard.qmk.enable = true;
-  services.udev.packages = with pkgs; [
-    qmk-udev-rules
   ];
 
   # Enable the OpenSSH daemon.
