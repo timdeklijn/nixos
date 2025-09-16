@@ -68,6 +68,7 @@
         "dash-to-panel@jderose9.github.com"
         "search-light@icedman.org"
         "focus-follows-workspace@christopher.luebbemeier.gmail.com"
+        "openbar@neuromorph"
       ];
     };
     "org/gnome/settings-daemon/plugins/power" = {
