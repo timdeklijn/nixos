@@ -146,6 +146,7 @@
     nerd-fonts.ubuntu-mono
     nerd-fonts.monaspace
     nerd-fonts.jetbrains-mono
+    nerd-fonts.hack
   ];
 
   # use 1password
