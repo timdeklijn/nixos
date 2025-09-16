@@ -56,7 +56,7 @@ in
 
   imports = [
     (import ./applications/vscode.nix { inherit pkgs myFont; })
-    ./applications/kitty.nix
+    (import ./applications/kitty.nix { inherit myFont; })
   ];
 
   # Let Home Manager install and manage itself.

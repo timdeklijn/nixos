@@ -1,12 +1,7 @@
 {
-  pkgs,
-  # myFont,
+  myFont,
   ...
 }:
-
-let
-  myFont = "Hack Nerd Font Mono";
-in
 
 {
 
