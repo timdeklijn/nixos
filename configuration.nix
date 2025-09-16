@@ -14,6 +14,7 @@
 
   # Help with instability in wifi and OS
   hardware.enableRedistributableFirmware = true;
+  hardware.firmware = [ pkgs.linux-firmware ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
