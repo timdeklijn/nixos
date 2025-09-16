@@ -55,7 +55,7 @@ in
   ];
 
   imports = [
-    ./applications/vscode.nix
+    (import ./applications/vscode.nix { inherit pkgs myFont; })
     ./applications/kitty.nix
   ];
 
