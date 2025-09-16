@@ -45,6 +45,7 @@
     gnomeExtensions.focus-follows-workspace
     gnomeExtensions.search-light
     gnomeExtensions.vitals
+    gnomeExtensions.open-bar
   ];
 
   imports = [
