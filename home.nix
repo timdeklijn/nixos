@@ -121,6 +121,11 @@
       enable-hot-corners = false;
       show-battery-percentage = true;
     };
+    "org/gnome/shell/extensions/open-bar" = {
+      "bar-type" = 2;
+      "neon-glow" = false;
+      "bar-margins" = 0;
+    };
     "org/gnome/desktop/sound" = {
       event-sounds = false;
     };
