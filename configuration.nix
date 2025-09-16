@@ -21,7 +21,11 @@
 
   # Help with instability in wifi and OS
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ "amdgpu.dcdebugmask=0x10" ];
+  # initcall_blacklist is added to fix gnome freezing after login (AMD issue).
+  boot.kernelParams = [
+    "amdgpu.dcdebugmask=0x10"
+    "initcall_blacklist=simpledrm_platform_driver_init"
+  ];
   services.power-profiles-daemon.enable = true;
 
   networking.hostName = "fw13"; # Define your hostname.
@@ -143,7 +147,6 @@
     enable = true;
     polkitPolicyOwners = [ "tim" ];
   };
-
   nixpkgs.config.permittedInsecurePackages = [
     "libsoup-2.74.3"
   ];

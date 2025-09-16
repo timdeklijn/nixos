@@ -42,7 +42,7 @@
         "editor.fontFamily" = "'JetBrainsMono Nerd Font Mono', monospace";
         "editor.fontLigatures" = true;
         "editor.fontSize" = 14;
-        "editor.lineHeight" = 1.2;
+        "editor.lineHeight" = 1.3;
         "editor.fontWeight" = "500";
         "editor.lineNumbers" = "off";
         "editor.minimap.enabled" = false;
@@ -83,7 +83,7 @@
         "redhat.telemetry.enabled" = false;
         "git.decorations.enabled" = true;
         "remote.autoForwardPortsSource" = "hybrid";
-        "workbench.colorTheme" = "GitHub Dark Default";
+        "workbench.colorTheme" = "GitHub Dark";
         "workbench.iconTheme" = "vs-seti";
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nixd";
