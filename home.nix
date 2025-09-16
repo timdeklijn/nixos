@@ -183,6 +183,7 @@
     enableZshIntegration = true;
   };
   programs.direnv.enable = true;
+  programs.git.delta.enable = true;
   programs.zsh = {
     # This should be set to true, even if it is set to configuration.nix.
     enable = true;
