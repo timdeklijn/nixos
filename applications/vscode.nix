@@ -12,6 +12,7 @@
         bbenoist.nix
         charliermarsh.ruff
         github.github-vscode-theme
+        dracula-theme.theme-dracula
         elixir-lsp.vscode-elixir-ls
         jnoortheen.nix-ide
         johnpapa.vscode-peacock
@@ -84,7 +85,7 @@
         "redhat.telemetry.enabled" = false;
         "git.decorations.enabled" = true;
         "remote.autoForwardPortsSource" = "hybrid";
-        "workbench.colorTheme" = "GitHub Dark";
+        "workbench.colorTheme" = "One Monokai";
         "workbench.iconTheme" = "vs-seti";
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nixd";
