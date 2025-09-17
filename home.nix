@@ -42,7 +42,7 @@ in
     slack
     spotify
     variety
-    # vscode-fhs
+    chromium
 
     gnome-shell-extensions
     gnome-tweaks
