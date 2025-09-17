@@ -77,6 +77,10 @@ in
         "openbar@neuromorph"
       ];
     };
+    "org/gnome/desktop/default-applications/browser" = {
+      exec = "flatpak run app.zen_browser.zen";
+      name = "Zen Browser";
+    };
     "org/gnome/settings-daemon/plugins/power" = {
       ambient-enabled = false;
     };
@@ -137,6 +141,16 @@ in
     };
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false; # Set to false to reverse "natural" scrolling
+    };
+
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = [ "app.zen_browser.zen.desktop" ];
+      "x-scheme-handler/http" = [ "app.zen_browser.zen.desktop" ];
+      "x-scheme-handler/https" = [ "app.zen_browser.zen.desktop" ];
     };
   };
 
