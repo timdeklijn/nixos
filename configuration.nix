@@ -85,6 +85,7 @@
     packages = [
       "com.dropbox.Client"
       "org.signal.Signal"
+      "app.zen_browser.zen"
     ];
   };
 
