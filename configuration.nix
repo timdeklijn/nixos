@@ -17,7 +17,8 @@
   hardware.firmware = [ pkgs.linux-firmware ];
 
   # Keyboard config
-  hardware.keyboard.uhk.enable = true;
+  # hardware.keyboard.uhk.enable = true;
+  services.udev.packages = [ pkgs.uhk-agent ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
