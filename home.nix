@@ -43,6 +43,7 @@ in
     spotify
     variety
     chromium
+    uhk-agent
 
     gnome-shell-extensions
     gnome-tweaks
