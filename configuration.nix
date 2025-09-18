@@ -18,7 +18,6 @@
 
   # Keyboard config
   hardware.keyboard.uhk.enable = true;
-  # services.udev.packages = [ pkgs.uhk-agent ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

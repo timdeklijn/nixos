@@ -3,6 +3,9 @@
   myFont,
   ...
 }:
+let
+  fontSize = 17;
+in
 {
   programs.vscode = {
     enable = true;
@@ -42,9 +45,9 @@
       userSettings = {
         "editor.fontFamily" = "'${myFont}', monospace";
         "editor.fontLigatures" = true;
-        "editor.fontSize" = 14;
-        "editor.lineHeight" = 1.3;
-        "editor.fontWeight" = "500";
+        "editor.fontSize" = fontSize;
+        "editor.lineHeight" = 1.2;
+        "editor.fontWeight" = "600";
         "editor.lineNumbers" = "off";
         "editor.minimap.enabled" = false;
         "editor.minimap.autohide" = "none";
@@ -56,9 +59,9 @@
         "editor.glyphMargin" = true;
         "editor.folding" = false;
         "debug.console.fontFamily" = "'${myFont}', monospace";
-        "debug.console.fontSize" = 14;
+        "debug.console.fontSize" = fontSize;
         "terminal.integrated.fontFamily" = "'${myFont}', monospace";
-        "terminal.integrated.fontSize" = 14;
+        "terminal.integrated.fontSize" = fontSize;
         "terminal.integrated.fontWeight" = "500";
         "terminal.integrated.tabs.location" = "left";
         "terminal.integrated.enableMultiLinePasteWarning" = "never";
