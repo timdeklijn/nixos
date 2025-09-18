@@ -95,6 +95,7 @@
         "nix.serverSettings.options.nixos.expr" =
           "(builtins.getFlake \"/path/to/flake.nix\").nixosConfigurations.<name>.options";
         "terminal.integrated.shellIntegration.enabled" = false;
+        "chat.disableAIFeatures" = true;
       };
       keybindings = [
         {
