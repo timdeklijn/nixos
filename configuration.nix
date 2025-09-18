@@ -171,6 +171,7 @@
     # there is a manual step to download the package in there.
     displaylink
     qmk
+    uhk-agent
   ];
 
   # Enable the OpenSSH daemon.
