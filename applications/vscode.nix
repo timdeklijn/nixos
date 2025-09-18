@@ -94,14 +94,6 @@
           "(builtins.getFlake \"/path/to/flake.nix\").nixosConfigurations.<name>.options.home-manager.users.type.getSubOptions []";
         "nix.serverSettings.options.nixos.expr" =
           "(builtins.getFlake \"/path/to/flake.nix\").nixosConfigurations.<name>.options";
-        "terminal.integrated.profiles.linux" = {
-          currentShell = {
-            path = "\${env:SHELL}";
-            args = [ "-l" ];
-          };
-        };
-        "terminal.integrated.defaultProfile.linux" = "currentShell";
-        "terminal.integrated.shellIntegration.enabled" = true;
         "chat.disableAIFeatures" = true;
       };
       keybindings = [
