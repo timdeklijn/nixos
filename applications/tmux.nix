@@ -34,6 +34,9 @@
     extraConfig = ''
       set-option -g status-position bottom
 
+      # reload config
+      bind r source-file ~/.config/tmux/tmux.conf\; display "Reloaded!"
+
       # remap split panes
       bind | split-window -h
       bind _ split-window -v
