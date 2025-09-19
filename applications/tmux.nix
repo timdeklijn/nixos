@@ -25,6 +25,8 @@
 
           set -g @dracula-show-network false
 
+          set -g @dracula-show-cpu true
+
           set -g @dracula-cpu-display-load true
           set -g @dracula-cpu-usage-label " "
 
