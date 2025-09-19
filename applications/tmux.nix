@@ -20,7 +20,8 @@
           set -g @dracula-show-powerline true
 
           set -g @dracula-show-battery true
-          set -g @dracula-show-battery-status true
+          # set -g @dracula-battery-label "♥ "
+          # set -g @dracula-show-battery-status true
 
           set -g @dracula-cpu-display-load true
           set -g @dracula-cpu-usage-label " "
