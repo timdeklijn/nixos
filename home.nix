@@ -42,8 +42,8 @@ in
     slack
     spotify
     variety
-    chromium
 
+    # GNOME packages
     gnome-shell-extensions
     gnome-tweaks
     gnomeExtensions.appindicator
@@ -59,59 +59,33 @@ in
     (import ./applications/kitty.nix { inherit myFont; })
     (import ./applications/tmux.nix { inherit pkgs; })
     ./applications/gnome.nix
+    ./applications/shell.nix
   ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 
-  # Configure zsh with nice tools
-  programs.starship.enable = true;
-  programs.zoxide.enable = true;
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-  programs.direnv.enable = true;
-  programs.git.delta.enable = true;
-  programs.zsh = {
-    # This should be set to true, even if it is set to configuration.nix.
-    enable = true;
+  home.file.".gitconfig".text = ''
+    [core]
+        pager = delta
 
-    autocd = true;
-    autosuggestion.enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
+    [interactive]
+        diffFilter = delta --color-only
 
-    # Save zsh config files here.
-    dotDir = ".config/zsh";
+    [delta]
+        navigate = true  # use n and N to move between diff sections
+        dark = true      # or light = true, or omit for auto-detection
 
-    # Add my zsh aliases. Requires `eza`.
-    shellAliases = {
-      ga = "git add";
-      gs = "git status";
-      gc = "git commit";
-      gp = "git push";
-      gP = "git pull";
-      gl = "git log";
-      k = "kubectl";
-      kc = "kubectl ctx";
-      kn = "kubectl ns";
-      ls = "eza";
-      ll = "eza -la";
-    };
-    # This should help being able to use git within devcontainers withou
-    # running this command manually.
-    initContent = ''
-      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-      # ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
-    '';
-  };
+    [merge]
+        conflictStyle = zdiff3
+  '';
 
   # Make sure that I can use my ssh settings while in a devcontianer:
   home.file.".ssh/config".text = ''
     AddKeysToAgent yes
 
+    # NOTE: this is used for RWS datalab
     HOST gitlab.com
         Hostname altssh.gitlab.com
         User git

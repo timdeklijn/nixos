@@ -20,7 +20,7 @@
       home-manager,
       nix-flatpak,
       ...
-    }@inputs:
+    }:
     {
       # Describe my system
       nixosConfigurations = {
@@ -32,9 +32,6 @@
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
-              # home-manager.useUserPackages = true;
-              # home-manager.extraSpecialArgs = { inherit inputs; };
-              # TODO: this import can be something different I think
               home-manager.users."tim" = import ./home.nix;
             }
           ];
