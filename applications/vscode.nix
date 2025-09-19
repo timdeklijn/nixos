@@ -66,10 +66,14 @@ in
         "terminal.integrated.tabs.location" = "left";
         "terminal.integrated.enableMultiLinePasteWarning" = "never";
         "workbench.startupEditor" = "none";
+        "workbench.activityBar.visible" = false;
         "workbench.sideBar.location" = "right";
         "workbench.activityBar.location" = "bottom";
         "workbench.editor.showTabs" = "none";
         "workbench.secondarySideBar.defaultVisibility" = "hidden";
+        "workbench.tree.renderIndentGuides" = "none";
+        "workbench.layoutControl.type" = "menu";
+        "breadcrumbs.enabled" = false;
         "window.menuBarVisibility" = "toggle";
         "window.customTitleBarVisibility" = "auto";
         "window.zoomLevel" = 1.5;
