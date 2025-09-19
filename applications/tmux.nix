@@ -16,11 +16,18 @@
       {
         plugin = pkgs.tmuxPlugins.dracula;
         extraConfig = ''
-          set -g @dracula-show-battery true
-          set -g @dracula-show-powerline true
           set -g @dracula-refresh-rate 10
+          set -g @dracula-show-powerline true
+
+          set -g @dracula-show-battery true
+          set -g @dracula-battery-label "♥ "
+          set -g @dracula-show-battery-status true
+
+          set -g @dracula-cpu-display-load true
+          set -g @dracula-cpu-usage-label " "
+
           set -g @dracula-show-fahrenheit false
-          set -g @dracula-fixed-location "Utrecht"
+          set -g @dracula-show-location false
         '';
       }
     ];
