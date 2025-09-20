@@ -90,7 +90,7 @@ in
         "redhat.telemetry.enabled" = false;
         "git.decorations.enabled" = true;
         "remote.autoForwardPortsSource" = "hybrid";
-        "workbench.colorTheme" = "Default Dark+";
+        "workbench.colorTheme" = "Default Dark Modern";
         "workbench.iconTheme" = "vs-seti";
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nixd";
