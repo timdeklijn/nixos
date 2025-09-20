@@ -22,6 +22,7 @@ in
     git
     git-lfs
     just
+    jq
     kitty
     fastfetch
     nixfmt-rfc-style

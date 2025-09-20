@@ -4,7 +4,7 @@
   ...
 }:
 let
-  fontSize = 15;
+  fontSize = 14;
 in
 {
   programs.vscode = {
