@@ -14,7 +14,6 @@ in
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
         charliermarsh.ruff
-        dracula-theme.theme-dracula
         elixir-lsp.vscode-elixir-ls
         jnoortheen.nix-ide
         johnpapa.vscode-peacock
@@ -91,7 +90,7 @@ in
         "redhat.telemetry.enabled" = false;
         "git.decorations.enabled" = true;
         "remote.autoForwardPortsSource" = "hybrid";
-        "workbench.colorTheme" = "Dracula Theme";
+        "workbench.colorTheme" = "Default Dark+";
         "workbench.iconTheme" = "vs-seti";
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nixd";
