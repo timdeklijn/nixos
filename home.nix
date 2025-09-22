@@ -37,7 +37,7 @@ in
 
     # # sublime text editor
     sublime4-dev
-    # sublime-merge
+    sublime-merge
 
     # 'GUI' programs
     audacity
