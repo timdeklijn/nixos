@@ -39,6 +39,8 @@ in
     sublime4-dev
     sublime-merge
 
+    pyright
+
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
