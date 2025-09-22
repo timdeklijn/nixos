@@ -36,7 +36,7 @@ in
     nixd
 
     # # sublime text editor
-    sublime
+    sublime4
     # sublime-merge
 
     # 'GUI' programs
