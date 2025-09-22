@@ -35,6 +35,10 @@ in
 
     nixd
 
+    # # sublime text editor
+    sublime
+    # sublime-merge
+
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
