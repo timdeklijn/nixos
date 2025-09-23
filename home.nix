@@ -33,6 +33,8 @@ in
     wget
     zoxide
 
+    maple-mono.NF-CN-unhinted
+
     nixd
 
     # sublime text editor
