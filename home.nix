@@ -5,7 +5,7 @@
 }:
 
 let
-  myFont = "UbuntuMono Nerd Font Mono";
+  myFont = "Maple Mono NF CN";
 in
 
 {
