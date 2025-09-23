@@ -5,7 +5,7 @@
 }:
 
 let
-  myFont = "JetBrainsMono Nerd Font Mono";
+  myFont = "Ubuntu Nerd Font Mono";
 in
 
 {
@@ -35,11 +35,16 @@ in
 
     nixd
 
-    # # sublime text editor
+    # sublime text editor
     sublime4-dev
     sublime-merge
 
+    # Language servers for programming
     pyright
+    yaml-language-server
+    docker-language-server
+    nodePackages.vscode-json-languageserver
+    nodejs_24
 
     # 'GUI' programs
     audacity
