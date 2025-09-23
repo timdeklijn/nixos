@@ -56,23 +56,12 @@ in
     slack
     spotify
     variety
-
-    # GNOME packages
-    gnome-shell-extensions
-    gnome-tweaks
-    gnomeExtensions.appindicator
-    gnomeExtensions.dash-to-panel
-    gnomeExtensions.focus-follows-workspace
-    gnomeExtensions.search-light
-    gnomeExtensions.vitals
-    gnomeExtensions.open-bar
   ];
 
   imports = [
     (import ./applications/vscode.nix { inherit pkgs myFont; })
     (import ./applications/kitty.nix { inherit myFont; })
     (import ./applications/tmux.nix { inherit pkgs; })
-    ./applications/gnome.nix
     ./applications/shell.nix
   ];
 

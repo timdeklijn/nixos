@@ -70,19 +70,10 @@
     mesa
   ];
 
-  # services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
-  # To disable installing GNOME's suite of applications
-  # and only be left with GNOME shell.
-  services.gnome.core-apps.enable = true;
-  services.gnome.core-developer-tools.enable = false;
-  services.gnome.games.enable = false;
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-tour
-    gnome-user-docs
-  ];
   services.flatpak = {
     enable = true;
     packages = [

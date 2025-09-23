@@ -1,3 +1,14 @@
+# Add these GNOME packages to the home manager packages.
+# gnome-shell-extensions
+# gnome-tweaks
+# gnomeExtensions.appindicator
+# gnomeExtensions.dash-to-panel
+# gnomeExtensions.focus-follows-workspace
+# gnomeExtensions.search-light
+# gnomeExtensions.vitals
+# gnomeExtensions.open-bar
+
+
 {
   dconf.enable = true;
   dconf.settings = {
