@@ -18,21 +18,23 @@ in
     delta
     direnv
     eza
+    fastfetch
     fzf
     git
     git-lfs
-    just
     jq
+    just
     kitty
-    fastfetch
     nixfmt-rfc-style
     ripgrep
     starship
     tmux
     vim
     wget
+    yazi
     zoxide
 
+    # Not a nerdfont
     maple-mono.NF-CN-unhinted
 
     nixd
@@ -42,11 +44,11 @@ in
     sublime-merge
 
     # Language servers for programming
+    docker-language-server
+    nodejs_24
+    nodePackages.vscode-json-languageserver
     pyright
     yaml-language-server
-    docker-language-server
-    nodePackages.vscode-json-languageserver
-    nodejs_24
 
     # 'GUI' programs
     audacity
