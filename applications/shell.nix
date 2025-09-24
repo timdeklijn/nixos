@@ -42,6 +42,7 @@
       kn = "kubectl ns";
       ls = "eza";
       ll = "eza -la";
+      y = "yazi";
     };
     # This should help being able to use git within devcontainers withou
     # running this command manually.
