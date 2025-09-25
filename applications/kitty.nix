@@ -24,7 +24,7 @@
       linux_display_server = "x11";
 
       # Colors
-      background            ="#001e26";
+      background            ="#00181f";
       foreground            ="#708183";
       cursor                ="#708183";
       selection_background  ="#002731";
@@ -44,7 +44,7 @@
       color14               ="#81908f";
       color7                ="#e9e2cb";
       color15               ="#fcf4dc";
-      selection_foreground ="#001e26";
+      selection_foreground  ="#001e26";
 
     };
   };
