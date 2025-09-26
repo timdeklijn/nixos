@@ -24,7 +24,7 @@
       linux_display_server = "x11";
 
       # Colors
-      background            ="#00181f";
+      background            ="#000000";
       foreground            ="#708183";
       cursor                ="#708183";
       selection_background  ="#002731";
