@@ -57,6 +57,7 @@ in
     orca-slicer
     slack
     spotify
+    swaybg
     variety
   ];
 
