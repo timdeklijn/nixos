@@ -22,6 +22,7 @@ in
     fzf
     git
     git-lfs
+    ghostty
     jq
     just
     kitty
