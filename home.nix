@@ -59,6 +59,7 @@ in
     spotify
     swaybg
     variety
+    networkmanagerapplet
   ];
 
   imports = [
