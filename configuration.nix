@@ -141,7 +141,7 @@
     nerd-fonts.ubuntu-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.comic-shanns-mono
-    nerd-fonts.cascadia-code-mono
+    nerd-fonts.caskaydia-mono
   ];
 
   # use 1password
