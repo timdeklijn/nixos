@@ -143,6 +143,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.comic-shanns-mono
     nerd-fonts.caskaydia-mono
+    nerd-fonts.geist-mono
   ];
 
   # use 1password
