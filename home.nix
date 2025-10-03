@@ -203,7 +203,7 @@ in
 
       languages = {
         python = {
-          language-servers = [
+          language_servers = [
             "pyright"
             "!pyslp"
             "ruff"
