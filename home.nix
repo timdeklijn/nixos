@@ -192,7 +192,8 @@ in
         };
         pyright = {
           binary = {
-            path = lib.getExe pkgs.pyright;
+            path = "${pkgs.pyright}/bin/pyright-langserver";
+            arguments = [ "--stdio" ];
           };
         };
         ruff = {
