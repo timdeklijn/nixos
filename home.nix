@@ -38,21 +38,15 @@ in
     # Not a nerdfont
     maple-mono.NF-CN-unhinted
 
-    # emacs
-
-    # # Python dev support
+    # Python dev support
     ruff
     pyright
 
-    # # Language servers for JSON/YAML/Docker/Nix
-    # nodejs
+    # Language servers for JSON/YAML/Docker/Nix
     yaml-language-server
     vscode-langservers-extracted # includes json-language-server
     dockerfile-language-server-nodejs
     nixd
-
-    # odin # Odin compiler
-    # ols
 
     # sublime text editor
     sublime4-dev
@@ -124,7 +118,12 @@ in
   programs.emacs = {
     enable = true;
     package = pkgs.emacs;
-    extraPackages = (epkgs: [ epkgs.treesit-grammars.with-all-grammars ]);
+    extraPackages = (
+      epkgs: [
+        epkgs.vterm
+        epkgs.treesit-grammars.with-all-grammars
+      ]
+    );
   };
 
   # programs.zed-editor = {
