@@ -140,6 +140,9 @@ in
       assistant = {
         enable = false;
       };
+      font_family = "${myFont}";
+      font_size = 17;
+      line_height = "comfortable";
       hour_format = "hour24";
       auto_update = false;
       load_direnv = "shell_hook";
