@@ -26,7 +26,6 @@ in
     ghostty
     jq
     just
-    kitty
     nixfmt-rfc-style
     ripgrep
     starship
@@ -39,20 +38,19 @@ in
     # Not a nerdfont
     maple-mono.NF-CN-unhinted
 
-    zed-editor
+    emacs
 
     # # Python dev support
-    # ruff
-    # pyright
-    # python3
+    ruff
+    pyright
 
     # # Language servers for JSON/YAML/Docker/Nix
     # nodejs
-    # yaml-language-server
-    # vscode-langservers-extracted # includes json-language-server
-    # dockerfile-language-server-nodejs
-    # nil # Nix language server
-    # nixd
+    yaml-language-server
+    vscode-langservers-extracted # includes json-language-server
+    dockerfile-language-server-nodejs
+    nixd
+
     # odin # Odin compiler
     # ols
 
