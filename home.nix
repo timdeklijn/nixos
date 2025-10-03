@@ -5,7 +5,7 @@
 }:
 
 let
-  myFont = "Maple Mono NF CN";
+  myFont = "JetBrainsMono Nerd Font";
 in
 
 {
@@ -188,74 +188,60 @@ in
       };
     };
   };
-  xdg.configFile."zed/settings.json".text = ''
-    {
-      "editor": {
-        "font_family": "${myFont}",
-        "font_size": 14,
-        "line_numbers": "relative",
-        "tab_size": 4,
-        "use_spaces": true,
-        "soft_wrap": "preferred"
-      },
-      "languages": {
-        "python": {
-          "format_on_save": true,
-          "linters": ["ruff"],
-          "formatter": {
-            "command": ["${pkgs.ruff}/bin/ruff", "format", "-"]
-          },
-          "ruff": {
-            "path": "${pkgs.ruff}/bin/ruff"
-          },
-          "language_server": {
-            "command": ["${pkgs.pyright}/bin/pyright-langserver", "--stdio"]
-          }
-        },
-        "json": {
-          "format_on_save": true,
-          "language_server": {
-            "command": ["${pkgs.vscode-langservers-extracted}/bin/json-languageserver", "--stdio"]
-          }
-        },
-        "yaml": {
-          "format_on_save": true,
-          "language_server": {
-            "command": ["${pkgs.yaml-language-server}/bin/yaml-language-server", "--stdio"]
-          }
-        },
-        "dockerfile": {
-          "format_on_save": true,
-          "language_server": {
-            "command": ["${pkgs.dockerfile-language-server-nodejs}/bin/docker-langserver", "--stdio"]
-          }
-        },
-        "nix": {
-          "formatter": {
-            "command": ["${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt"]
-          },
-          "language_server": {
-            "command": ["${pkgs.nil}/bin/nil"]
-          }
-        },
-        "bash": {
-          "format_on_save": true,
-          "language_server": {
-            "command": ["${pkgs.bash-language-server}/bin/bash-language-server", "start"]
-        },
-        "odin": {
-          "compiler": {
-            "command": ["${pkgs.odin}/bin/odin"]
-          }
-          "language_server":
-            "command": ["${pkgs.ols}/bin/ols"]
-        }
-      },
-      "lsp":
-        "pyright":
+  #         "formatter": {
+  #           "command": ["${pkgs.ruff}/bin/ruff", "format", "-"]
+  #         },
+  #         "ruff": {
+  #           "path": "${pkgs.ruff}/bin/ruff"
+  #         },
+  #         "language_server": {
+  #           "command": ["${pkgs.pyright}/bin/pyright-langserver", "--stdio"]
+  #         }
+  #       },
+  #       "json": {
+  #         "format_on_save": true,
+  #         "language_server": {
+  #           "command": ["${pkgs.vscode-langservers-extracted}/bin/json-languageserver", "--stdio"]
+  #         }
+  #       },
+  #       "yaml": {
+  #         "format_on_save": true,
+  #         "language_server": {
+  #           "command": ["${pkgs.yaml-language-server}/bin/yaml-language-server", "--stdio"]
+  #         }
+  #       },
+  #       "dockerfile": {
+  #         "format_on_save": true,
+  #         "language_server": {
+  #           "command": ["${pkgs.dockerfile-language-server-nodejs}/bin/docker-langserver", "--stdio"]
+  #         }
+  #       },
+  #       "nix": {
+  #         "formatter": {
+  #           "command": ["${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt"]
+  #         },
+  #         "language_server": {
+  #           "command": ["${pkgs.nil}/bin/nil"]
+  #         }
+  #       },
+  #       "bash": {
+  #         "format_on_save": true,
+  #         "language_server": {
+  #           "command": ["${pkgs.bash-language-server}/bin/bash-language-server", "start"]
+  #       },
+  #       "odin": {
+  #         "compiler": {
+  #           "command": ["${pkgs.odin}/bin/odin"]
+  #         }
+  #         "language_server":
+  #           "command": ["${pkgs.ols}/bin/ols"]
+  #       }
+  #     },
+  #     "lsp":
+  #       "pyright":
 
-    }
-  '';
+  #   }
+  # '';
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
