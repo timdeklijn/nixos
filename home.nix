@@ -197,7 +197,6 @@ in
           };
         };
         ruff = {
-          format_on_save = true;
           binary = {
             path = "${pkgs.ruff}/bin/ruff";
             arguments = [ "server" ];
@@ -211,7 +210,7 @@ in
             "pyright"
             "ruff"
           ];
-          format_on_save = true;
+          format_on_save = "on";
           formatter = [
             {
               language_server = {
