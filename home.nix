@@ -219,10 +219,8 @@ in
             }
             {
               code_actions = {
-                source = {
-                  fixAll.ruff = true;
-                  organizeImports.ruff = true;
-                };
+                "source.fixAll.ruff" = true;
+                "source.organizeImports.ruff" = true;
               };
             }
           ];
