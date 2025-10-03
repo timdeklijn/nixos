@@ -193,7 +193,6 @@ in
         pyright = {
           binary = {
             path = lib.getExe pkgs.pyright;
-            arguments = [ "--stdio" ];
           };
         };
       };
