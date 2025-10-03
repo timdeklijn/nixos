@@ -213,8 +213,9 @@ in
           format_on_save = "on";
           formatter = [
             {
-              language_server = {
-                name = "ruff";
+              code_actions = {
+                source.fixAll.ruff = true;
+                source.organizeImports.ruff = true;
               };
             }
           ];
