@@ -65,6 +65,7 @@ in
     pyright
     yaml-language-server
     bash-language-server # Bash LSP
+    tree-sitter-grammars.tree-sitter-python
 
     # 'GUI' programs
     audacity
