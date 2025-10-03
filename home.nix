@@ -211,6 +211,14 @@ in
             "pyright"
             "ruff"
           ];
+          format_on_save = true;
+          formatter = [
+            {
+              language_server = {
+                name = "ruff";
+              };
+            }
+          ];
         };
       };
     };
