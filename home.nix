@@ -6,7 +6,7 @@
 }:
 
 let
-  myFont = "JetBrainsMono Nerd Font";
+  myFont = "JetBrainsMono Nerd Font Mono";
 in
 
 {
@@ -140,7 +140,7 @@ in
       assistant = {
         enable = false;
       };
-      font_family = "${myFont}";
+      buffer_font_family = "${myFont}";
       font_size = 17;
       line_height = "comfortable";
       hour_format = "hour24";
