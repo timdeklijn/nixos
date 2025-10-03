@@ -183,7 +183,7 @@ in
       lsp = {
         nix = {
           binary = {
-            path = lib.getExe pkgs.rust-analyzer;
+            path_lookup = true;
           };
         };
       };
