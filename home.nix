@@ -195,6 +195,19 @@ in
             path = lib.getExe pkgs.pyright;
           };
         };
+        ruff = {
+          format_on_save = true;
+        };
+      };
+
+      languages = {
+        python = {
+          language-servers = [
+            "pyright"
+            "!pyslp"
+            "ruff"
+          ];
+        };
       };
     };
   };
