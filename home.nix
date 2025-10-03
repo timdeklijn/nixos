@@ -152,7 +152,7 @@ in
         light = "One Light";
         dark = "One Dark";
       };
-      show_whitespaces = "all";
+      show_whitespaces = "selection";
       terminal = {
         alternate_scroll = "off";
         blinking = "off";
@@ -188,6 +188,11 @@ in
         nix = {
           binary = {
             path_lookup = true;
+          };
+        };
+        pyright = {
+          binary = {
+            path = "${pkgs.pyright}/bin/pyright-langserver";
           };
         };
       };
