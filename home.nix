@@ -193,6 +193,7 @@ in
         pyright = {
           binary = {
             path = "${pkgs.pyright}/bin/pyright-langserver";
+            argurments = [ "--stdio" ];
           };
         };
       };
