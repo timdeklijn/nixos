@@ -59,6 +59,8 @@ in
     pyright
     yaml-language-server
     bash-language-server # Bash LSP
+    odin
+    ols
 
     # 'GUI' programs
     audacity
