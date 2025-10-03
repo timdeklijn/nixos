@@ -213,9 +213,14 @@ in
           format_on_save = "on";
           formatter = [
             {
+              language_server = {
+                name = "ruff";
+              };
               code_actions = {
-                source.fixAll.ruff = true;
-                source.organizeImports.ruff = true;
+                source = {
+                  fixAll.ruff = true;
+                  organizeImports.ruff = true;
+                };
               };
             }
           ];
@@ -223,15 +228,7 @@ in
       };
     };
   };
-  #         "formatter": {
-  #           "command": ["${pkgs.ruff}/bin/ruff", "format", "-"]
-  #         },
-  #         "ruff": {
-  #           "path": "${pkgs.ruff}/bin/ruff"
-  #         },
-  #         "language_server": {
-  #           "command": ["${pkgs.pyright}/bin/pyright-langserver", "--stdio"]
-  #         }
+
   #       },
   #       "json": {
   #         "format_on_save": true,
