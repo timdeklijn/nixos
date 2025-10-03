@@ -216,6 +216,8 @@ in
               language_server = {
                 name = "ruff";
               };
+            }
+            {
               code_actions = {
                 source = {
                   fixAll.ruff = true;
