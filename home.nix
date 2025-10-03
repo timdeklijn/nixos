@@ -52,6 +52,7 @@ in
     vscode-langservers-extracted # includes json-language-server
     dockerfile-language-server-nodejs
     nil # Nix language server
+    nixd
     odin # Odin compiler
     ols
 
