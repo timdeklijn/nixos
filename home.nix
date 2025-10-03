@@ -64,6 +64,7 @@ in
     nodePackages.vscode-json-languageserver
     pyright
     yaml-language-server
+    bash-language-server # Bash LSP
 
     # 'GUI' programs
     audacity
@@ -170,6 +171,11 @@ in
             "command": ["${pkgs.nil}/bin/nil"]
           }
         },
+        "bash": {
+          "format_on_save": true,
+          "language_server": {
+            "command": ["${pkgs.bash-language-server}/bin/bash-language-server", "start"]
+        }
         "odin": {
           "compiler": {
             "command": ["${pkgs.odin}/bin/odin"]
