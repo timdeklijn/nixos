@@ -123,7 +123,7 @@ in
   xdg.configFile."zed/settings.json".text = ''
     {
       "editor": {
-        "font_family": ${myFont}
+        "font_family": "${myFont}",
         "font_size": 14,
         "line_numbers": "relative",
         "tab_size": 4,
