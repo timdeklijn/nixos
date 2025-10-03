@@ -192,8 +192,8 @@ in
         };
         pyright = {
           binary = {
-            path = "${pkgs.pyright}/bin/pyright-langserver";
-            argurments = [ "--stdio" ];
+            path = lib.getExe pkgs.pyright;
+            arguments = [ "--stdio" ];
           };
         };
       };
