@@ -198,6 +198,10 @@ in
         };
         ruff = {
           format_on_save = true;
+          binary = {
+            path = "${pkgs.ruff}/bin/ruff";
+            arguments = [ "server" ];
+          };
         };
       };
 
