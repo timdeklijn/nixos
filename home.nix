@@ -50,7 +50,7 @@ in
     yaml-language-server
     vscode-langservers-extracted # includes json-language-server
     dockerfile-language-server-nodejs
-    nil # Nix language server
+    nixd # Nix language server
     odin # Odin compiler
     ols
 
