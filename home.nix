@@ -38,7 +38,7 @@ in
     # Not a nerdfont
     maple-mono.NF-CN-unhinted
 
-    emacs
+    # emacs
 
     # # Python dev support
     ruff
@@ -65,7 +65,6 @@ in
     pyright
     yaml-language-server
     bash-language-server # Bash LSP
-    tree-sitter-grammars.tree-sitter-python
 
     # 'GUI' programs
     audacity
@@ -120,6 +119,12 @@ in
     enable = true;
     defaultCacheTtl = 1800;
     enableSshSupport = true;
+  };
+
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs;
+    extraPackages = (epkgs: [ epkgs.treesit-grammars.with-all-grammars ]);
   };
 
   # programs.zed-editor = {
