@@ -121,6 +121,73 @@ in
     enableSshSupport = true;
   };
 
+  programs.zed-editor = {
+    enable = true;
+    extensions = [
+      "python"
+      "ruff"
+      "pyright"
+      "json"
+      "yaml"
+      "dockerfile"
+      "nix"
+      "bash"
+      "odin"
+    ];
+    userSettings = {
+      assistant = {
+        enable = false;
+      };
+      hour_format = "hour24";
+      auto_update = false;
+      load_direnv = "shell_hook";
+      base_keymap = "VSCode";
+      theme = {
+        mode = "system";
+        light = "One Light";
+        dark = "One Dark";
+      };
+      show_whitespaces = "all";
+      terminal = {
+        alternate_scroll = "off";
+        blinking = "off";
+        copy_on_select = true;
+        dock = "bottom";
+        detect_venv = {
+          on = {
+            directories = [
+              ".env"
+              "env"
+              ".venv"
+              "venv"
+            ];
+            activate_script = "default";
+          };
+        };
+        env = {
+          TERM = "alacritty";
+        };
+        font_family = "${myFont}";
+        font_size = 15;
+        line_height = "comfortable";
+        option_as_meta = false;
+        button = false;
+        shell = "system";
+        toolbar = {
+          title = true;
+        };
+        working_directory = "current_project_directory";
+      };
+
+      lsp = {
+        nix = {
+          binary = {
+            path_lookup = true;
+          };
+        };
+      };
+    };
+  };
   xdg.configFile."zed/settings.json".text = ''
     {
       "editor": {
@@ -175,7 +242,7 @@ in
           "format_on_save": true,
           "language_server": {
             "command": ["${pkgs.bash-language-server}/bin/bash-language-server", "start"]
-        }
+        },
         "odin": {
           "compiler": {
             "command": ["${pkgs.odin}/bin/odin"]
@@ -183,7 +250,10 @@ in
           "language_server":
             "command": ["${pkgs.ols}/bin/ols"]
         }
-      }
+      },
+      "lsp":
+        "pyright":
+
     }
   '';
 
