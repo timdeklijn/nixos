@@ -205,7 +205,6 @@ in
         python = {
           language_servers = [
             "pyright"
-            "!pyslp"
             "ruff"
           ];
         };
