@@ -39,22 +39,22 @@ in
     # Not a nerdfont
     maple-mono.NF-CN-unhinted
 
-    zed-editor
+    zed-editor-fhs
 
-    # Python dev support
-    ruff
-    pyright
-    python3
+    # # Python dev support
+    # ruff
+    # pyright
+    # python3
 
-    # Language servers for JSON/YAML/Docker/Nix
-    nodejs
-    yaml-language-server
-    vscode-langservers-extracted # includes json-language-server
-    dockerfile-language-server-nodejs
-    nil # Nix language server
-    nixd
-    odin # Odin compiler
-    ols
+    # # Language servers for JSON/YAML/Docker/Nix
+    # nodejs
+    # yaml-language-server
+    # vscode-langservers-extracted # includes json-language-server
+    # dockerfile-language-server-nodejs
+    # nil # Nix language server
+    # nixd
+    # odin # Odin compiler
+    # ols
 
     # sublime text editor
     sublime4-dev
@@ -123,111 +123,111 @@ in
     enableSshSupport = true;
   };
 
-  programs.zed-editor = {
-    enable = true;
-    extensions = [
-      "python"
-      "ruff"
-      "pyright"
-      "json"
-      "yaml"
-      "dockerfile"
-      "nix"
-      "bash"
-      "odin"
-    ];
-    userSettings = {
-      assistant = {
-        enable = false;
-      };
-      buffer_font_family = "${myFont}";
-      buffer_font_size = 17;
-      line_height = "comfortable";
-      hour_format = "hour24";
-      auto_update = false;
-      load_direnv = "shell_hook";
-      base_keymap = "VSCode";
-      theme = {
-        mode = "system";
-        light = "One Light";
-        dark = "One Dark";
-      };
-      show_whitespaces = "selection";
-      terminal = {
-        alternate_scroll = "off";
-        blinking = "off";
-        copy_on_select = true;
-        dock = "bottom";
-        detect_venv = {
-          on = {
-            directories = [
-              ".env"
-              "env"
-              ".venv"
-              "venv"
-            ];
-            activate_script = "default";
-          };
-        };
-        env = {
-          TERM = "alacritty";
-        };
-        font_family = "${myFont}";
-        font_size = 15;
-        line_height = "comfortable";
-        option_as_meta = false;
-        button = false;
-        shell = "system";
-        toolbar = {
-          title = true;
-        };
-        working_directory = "current_project_directory";
-      };
+  # programs.zed-editor = {
+  #   enable = true;
+  #   extensions = [
+  #     "python"
+  #     "ruff"
+  #     "pyright"
+  #     "json"
+  #     "yaml"
+  #     "dockerfile"
+  #     "nix"
+  #     "bash"
+  #     "odin"
+  #   ];
+  #   userSettings = {
+  #     assistant = {
+  #       enable = false;
+  #     };
+  #     buffer_font_family = "${myFont}";
+  #     buffer_font_size = 17;
+  #     line_height = "comfortable";
+  #     hour_format = "hour24";
+  #     auto_update = false;
+  #     load_direnv = "shell_hook";
+  #     base_keymap = "VSCode";
+  #     theme = {
+  #       mode = "system";
+  #       light = "One Light";
+  #       dark = "One Dark";
+  #     };
+  #     show_whitespaces = "selection";
+  #     terminal = {
+  #       alternate_scroll = "off";
+  #       blinking = "off";
+  #       copy_on_select = true;
+  #       dock = "bottom";
+  #       detect_venv = {
+  #         on = {
+  #           directories = [
+  #             ".env"
+  #             "env"
+  #             ".venv"
+  #             "venv"
+  #           ];
+  #           activate_script = "default";
+  #         };
+  #       };
+  #       env = {
+  #         TERM = "alacritty";
+  #       };
+  #       font_family = "${myFont}";
+  #       font_size = 15;
+  #       line_height = "comfortable";
+  #       option_as_meta = false;
+  #       button = false;
+  #       shell = "system";
+  #       toolbar = {
+  #         title = true;
+  #       };
+  #       working_directory = "current_project_directory";
+  #     };
 
-      lsp = {
-        nix = {
-          binary = {
-            path_lookup = true;
-          };
-        };
-        pyright = {
-          binary = {
-            path = "${pkgs.pyright}/bin/pyright-langserver";
-            arguments = [ "--stdio" ];
-          };
-        };
-        ruff = {
-          binary = {
-            path = "${pkgs.ruff}/bin/ruff";
-            arguments = [ "server" ];
-          };
-        };
-      };
+  #     lsp = {
+  #       nix = {
+  #         binary = {
+  #           path_lookup = true;
+  #         };
+  #       };
+  #       pyright = {
+  #         binary = {
+  #           path = "${pkgs.pyright}/bin/pyright-langserver";
+  #           arguments = [ "--stdio" ];
+  #         };
+  #       };
+  #       ruff = {
+  #         binary = {
+  #           path = "${pkgs.ruff}/bin/ruff";
+  #           arguments = [ "server" ];
+  #         };
+  #       };
+  #     };
 
-      languages = {
-        Python = {
-          language_servers = [
-            "pyright"
-            "ruff"
-          ];
-          format_on_save = "on";
-          formatter = [
-            {
-              language_server = {
-                name = "ruff";
-              };
-            }
-            {
-              code_actions = {
-                "source.fixAll.ruff" = true;
-                "source.organizeImports.ruff" = true;
-              };
-            }
-          ];
-        };
-      };
-    };
-  };
+  #     languages = {
+  #       Python = {
+  #         language_servers = [
+  #           "pyright"
+  #           "ruff"
+  #         ];
+  #         format_on_save = "on";
+  #         formatter = [
+  #           {
+  #             language_server = {
+  #               name = "ruff";
+  #             };
+  #           }
+  #           {
+  #             code_actions = {
+  #               "source.fixAll.ruff" = true;
+  #               "source.organizeImports.ruff" = true;
+  #             };
+  #           }
+  #         ];
+  #       };
+  #     };
+  #   };
+  # };
 
   #       },
   #       "json": {
