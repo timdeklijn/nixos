@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }:
 
@@ -50,7 +51,7 @@ in
     yaml-language-server
     vscode-langservers-extracted # includes json-language-server
     dockerfile-language-server-nodejs
-    nixd # Nix language server
+    nil # Nix language server
     odin # Odin compiler
     ols
 
@@ -182,7 +183,7 @@ in
       lsp = {
         nix = {
           binary = {
-            path_lookup = true;
+            path = lib.getExe pkgs.rust-analyzer;
           };
         };
       };
