@@ -205,7 +205,7 @@ in
       };
 
       languages = {
-        python = {
+        Python = {
           language_servers = [
             "pyright"
             "ruff"
