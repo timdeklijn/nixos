@@ -39,7 +39,7 @@ in
     # Not a nerdfont
     maple-mono.NF-CN-unhinted
 
-    zed-editor-fhs
+    zed-editor
 
     # # Python dev support
     # ruff
