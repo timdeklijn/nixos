@@ -56,7 +56,7 @@
   services.xserver = {
     videoDrivers = [
       "amd"
-      "displaylink"
+      # "displaylink"
       "modesetting"
     ];
     enable = true;
@@ -144,6 +144,7 @@
     nerd-fonts.comic-shanns-mono
     nerd-fonts.caskaydia-mono
     nerd-fonts.geist-mono
+    nerd-fonts.hasklug
   ];
 
   # use 1password
