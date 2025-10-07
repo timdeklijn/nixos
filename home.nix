@@ -128,6 +128,8 @@ in
     );
   };
 
+  programs.firefox.enable = true;
+
   # programs.zed-editor = {
   #   enable = true;
   #   extensions = [

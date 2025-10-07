@@ -24,6 +24,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Help with instability in wifi and OS
+  #
+  # NOTE: somehow this did not work with linux kernel version 6.17 and
+  # 'displaylink'
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "amdgpu.dcdebugmask=0x10"
