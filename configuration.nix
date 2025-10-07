@@ -24,7 +24,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Help with instability in wifi and OS
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "amdgpu.dcdebugmask=0x10"
   ];
@@ -56,10 +56,19 @@
   services.xserver = {
     videoDrivers = [
       "amd"
-      # "displaylink"
+      "displaylink"
       "modesetting"
     ];
     enable = true;
+  };
+
+  boot = {
+    extraModulePackages = [ config.boot.kernelPackages.evdi ];
+    initrd = {
+      kernelModules = [
+        "evdi"
+      ];
+    };
   };
 
   # should help freezing on startup
