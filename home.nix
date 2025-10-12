@@ -35,6 +35,8 @@ in
     yazi
     zoxide
 
+    codex
+
     # Not a nerdfont
     maple-mono.NF-CN-unhinted
 
