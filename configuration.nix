@@ -157,6 +157,7 @@
     nerd-fonts.caskaydia-mono
     nerd-fonts.geist-mono
     nerd-fonts.hasklug
+    nerd-fonts.sauce-code-pro
   ];
 
   # use 1password
