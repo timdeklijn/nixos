@@ -20,6 +20,7 @@ in
     direnv
     eza
     fastfetch
+    fd
     fzf
     git
     git-lfs
