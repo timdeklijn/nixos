@@ -6,7 +6,7 @@
 }:
 
 let
-  myFont = "Hasklug Nerd Font Mono";
+  myFont = "SauceCodePro Nerd Font Mono";
 in
 
 {
