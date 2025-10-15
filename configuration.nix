@@ -172,6 +172,7 @@
   programs.zsh.enable = true;
   # download nerd fonts
   fonts.packages = with pkgs; [
+    nerd-fonts.iosevka-term
     nerd-fonts.ubuntu-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.comic-shanns-mono
