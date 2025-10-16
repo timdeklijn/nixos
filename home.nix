@@ -51,10 +51,6 @@ in
     dockerfile-language-server-nodejs
     nixd
 
-    # sublime text editor
-    sublime4-dev
-    sublime-merge
-
     # Language servers for programming
     docker-language-server
     nodejs_24
@@ -87,6 +83,8 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
+
+  services.emacs.enable = true;
 
   home.file.".gitconfig".text = ''
     [core]
@@ -142,5 +140,4 @@ in
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "25.05";
-
 }
