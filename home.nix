@@ -84,8 +84,6 @@ in
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 
-  services.emacs.enable = true;
-
   home.file.".gitconfig".text = ''
     [core]
         pager = delta
@@ -118,6 +116,7 @@ in
     enableSshSupport = true;
   };
 
+  services.emacs.enable = true;
   programs.emacs = {
     enable = true;
     package = pkgs.emacs;

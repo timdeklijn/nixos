@@ -173,6 +173,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.iosevka-term
     nerd-fonts.ubuntu-mono
+    nerd-fonts.commit-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.comic-shanns-mono
     nerd-fonts.caskaydia-mono
