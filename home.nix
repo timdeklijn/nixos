@@ -38,8 +38,7 @@ in
 
     codex
 
-    # Not a nerdfont
-    maple-mono.NF-CN-unhinted
+    xdg-desktop-portal-gnome
 
     # Python dev support
     ruff
