@@ -203,6 +203,10 @@
     displaylink
     qmk
     uhk-agent
+    bluez
+    bluez-tools
+    wireplumber
+    pavucontrol
   ];
 
   # Enable the OpenSSH daemon.
