@@ -149,7 +149,6 @@
     #media-session.enable = true;
   };
   services.blueman.enable = true; # optional but helps manage connections
-
   services.fprintd.enable = true;
 
   # Allow unfree packages
