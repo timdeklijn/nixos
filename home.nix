@@ -99,32 +99,14 @@ in
         conflictStyle = zdiff3
   '';
 
-  # Make sure that I can use my ssh settings while in a devcontianer:
-  # home.file.".ssh/config" = {
-  #   text = ''
-  #     AddKeysToAgent yes
-
-  #     # NOTE: this is used for RWS datalab
-  #     HOST gitlab.com
-  #         Hostname altssh.gitlab.com
-  #         User git
-  #         Port 443
-  #   '';
-  #   mode = "0600";
-  # };
-
   programs.ssh = {
+    # I have tried to create my ssh config through home manager but openssh does
+    # not really like links. This is why there is currently an unmanaged file
+    # `~/.ssh/config`. These is some weird way to write a file on change, but
+    # for now that seems like a hassle.
     enable = true;
-    extraConfig = ''
-      AddKeysToAgent yes
-
-      # NOTE: this is used for RWS datalab
-      HOST gitlab.com
-          Hostname altssh.gitlab.com
-          User git
-          Port 443
-    '';
   };
+  home.file.".ssh/config".enable = false;
 
   services.gpg-agent = {
     enable = true;
