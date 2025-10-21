@@ -70,6 +70,7 @@ in
     swaybg
     variety
     networkmanagerapplet
+    zed-editor-fhs
   ];
 
   imports = [
