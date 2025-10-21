@@ -100,15 +100,31 @@ in
   '';
 
   # Make sure that I can use my ssh settings while in a devcontianer:
-  home.file.".ssh/config".text = ''
-    AddKeysToAgent yes
+  # home.file.".ssh/config" = {
+  #   text = ''
+  #     AddKeysToAgent yes
 
-    # NOTE: this is used for RWS datalab
-    HOST gitlab.com
-        Hostname altssh.gitlab.com
-        User git
-        Port 443
-  '';
+  #     # NOTE: this is used for RWS datalab
+  #     HOST gitlab.com
+  #         Hostname altssh.gitlab.com
+  #         User git
+  #         Port 443
+  #   '';
+  #   mode = "0600";
+  # };
+
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      AddKeysToAgent yes
+
+      # NOTE: this is used for RWS datalab
+      HOST gitlab.com
+          Hostname altssh.gitlab.com
+          User git
+          Port 443
+    '';
+  };
 
   services.gpg-agent = {
     enable = true;
