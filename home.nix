@@ -8,7 +8,7 @@
 let
   myFont = "SauceCodePro Nerd Font Mono";
 in
-
+# hyprland  pipewire wireplumber kitty
 {
   home.username = "tim";
   home.homeDirectory = "/home/tim";
@@ -38,7 +38,12 @@ in
 
     codex
 
-    xdg-desktop-portal-gnome
+    xdg-desktop-portal-gnome # TODO: remove?
+    hyprpaper
+    waybar
+    wofi
+    grim
+    slurp
 
     # Python dev support
     ruff
