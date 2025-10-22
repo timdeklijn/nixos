@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # unstable channel
 
     # Used for user packages and dotfiles
     home-manager = {
@@ -17,6 +18,7 @@
     {
       self,
       nixpkgs,
+      unstable,
       home-manager,
       nix-flatpak,
       ...
@@ -26,11 +28,21 @@
       nixosConfigurations = {
         fw13 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
             ./configuration.nix
             home-manager.nixosModules.home-manager
             {
+              nixpkgs.overlays = [
+                # 👇 Add the unstable overlay here
+                (final: prev: {
+                  unstable = import unstable {
+                    inherit (prev) system;
+                    config.allowUnfree = true; # optional
+                  };
+                })
+              ];
               home-manager.useGlobalPkgs = true;
               home-manager.users."tim" = import ./home.nix;
             }

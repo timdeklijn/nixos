@@ -1,19 +1,18 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }:
 
 let
   myFont = "SauceCodePro Nerd Font Mono";
 in
-# hyprland  pipewire wireplumber kitty
 {
   home.username = "tim";
   home.homeDirectory = "/home/tim";
 
   home.packages = with pkgs; [
+    unstable.ashell
     # command line utilities
     btop
     delta
@@ -44,7 +43,6 @@ in
     wofi
     grim
     slurp
-    ashell
     walker
     blueman
 

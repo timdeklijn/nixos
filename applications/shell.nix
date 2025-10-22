@@ -44,6 +44,7 @@
       ll = "eza -la";
       y = "yazi";
       s = "subl";
+      zed = "zeditor";
     };
     # This should help being able to use git within devcontainers withou
     # running this command manually.
