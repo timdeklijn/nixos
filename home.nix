@@ -41,6 +41,7 @@ in
     grim
     hyprlock
     hyprpaper
+    hypridle
     slurp
     walker
     wofi
