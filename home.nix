@@ -6,6 +6,12 @@
 
 let
   myFont = "SauceCodePro Nerd Font Mono";
+  slackXwl = pkgs.writeShellScriptBin "slack-xwayland" ''
+    #!/usr/bin/env bash
+    set -euo pipefail
+    export NIXOS_OZONE_WL=0
+    exec ${pkgs.slack}/bin/slack "$@"
+  '';
 in
 {
   home.username = "tim";
@@ -73,9 +79,9 @@ in
     citrix_workspace # needs a manual download due to enduser license agreements
     obsidian
     orca-slicer
+    slackXwl
     slack
     spotify
-    swaybg
     variety
     networkmanagerapplet
     zed-editor-fhs
@@ -96,13 +102,14 @@ in
 
   xdg.desktopEntries.slack = {
     name = "Slack";
-    exec = "env NIXOS_OZONE_WL=1 slack --enable-features=WaylandWindowDecorations,UseOzonePlatform --ozone-platform-hint=auto";
+    exec = "slack-xwayland %U"; # point desktop entry to the wrapper
     terminal = false;
     type = "Application";
     categories = [
       "Network"
       "InstantMessaging"
     ];
+    icon = "slack";
   };
 
   home.file.".gitconfig".text = ''
