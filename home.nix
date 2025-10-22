@@ -41,11 +41,11 @@ in
     xdg-desktop-portal-gnome # TODO: remove?
     hyprpaper
     hyprlock
-    waybar
     wofi
     grim
     slurp
     ashell
+    walker
 
     # Python dev support
     ruff
