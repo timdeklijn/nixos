@@ -40,6 +40,7 @@ in
 
     xdg-desktop-portal-gnome # TODO: remove?
     hyprpaper
+    hyprlock
     waybar
     wofi
     grim
@@ -82,6 +83,7 @@ in
     (import ./applications/vscode.nix { inherit pkgs myFont; })
     (import ./applications/kitty.nix { inherit myFont; })
     (import ./applications/tmux.nix { inherit pkgs; })
+    (import ./applications/wllogout.nix { inherit pkgs; })
     ./applications/shell.nix
   ];
 
