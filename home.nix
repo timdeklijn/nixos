@@ -46,6 +46,7 @@ in
     slurp
     ashell
     walker
+    blueman
 
     # Python dev support
     ruff
