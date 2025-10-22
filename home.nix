@@ -45,6 +45,7 @@ in
     wofi
     grim
     slurp
+    ashell
 
     # Python dev support
     ruff
