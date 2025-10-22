@@ -37,14 +37,15 @@ in
 
     codex
 
-    xdg-desktop-portal-gnome # TODO: remove?
-    hyprpaper
-    hyprlock
-    wofi
+    blueman
     grim
+    hyprlock
+    hyprpaper
     slurp
     walker
-    blueman
+    wofi
+    xdg-desktop-portal-hyprland
+    xwayland
 
     # Python dev support
     ruff
