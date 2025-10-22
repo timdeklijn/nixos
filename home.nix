@@ -79,6 +79,7 @@ in
     variety
     networkmanagerapplet
     zed-editor-fhs
+    tidal-hifi
   ];
 
   imports = [
