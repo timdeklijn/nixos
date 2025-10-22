@@ -154,6 +154,13 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  #
+  # NixOS-level system config
+  security.pam.services.hyprlock = {
+    unixAuth = true;
+    fprintAuth = true;
+    startSession = false;
+  };
 
   programs.nix-ld.enable = true;
 
