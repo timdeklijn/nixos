@@ -112,6 +112,10 @@ in
     icon = "slack";
   };
 
+  programs.hyprlock = {
+    enable = true;
+  };
+
   home.file.".gitconfig".text = ''
     [core]
         pager = delta
