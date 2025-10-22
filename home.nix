@@ -94,6 +94,17 @@ in
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 
+  xdg.desktopEntries.slack = {
+    name = "Slack";
+    exec = "env NIXOS_OZONE_WL=1 slack --enable-features=WaylandWindowDecorations,UseOzonePlatform --ozone-platform-hint=auto";
+    terminal = false;
+    type = "Application";
+    categories = [
+      "Network"
+      "InstantMessaging"
+    ];
+  };
+
   home.file.".gitconfig".text = ''
     [core]
         pager = delta
