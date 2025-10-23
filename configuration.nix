@@ -85,7 +85,6 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
-  programs.hyprland.enable = true;
 
   systemd.services.displaylink-server = {
     enable = true;
@@ -154,13 +153,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  #
-  # NixOS-level system config
-  security.pam.services.hyprlock = {
-    unixAuth = true;
-    fprintAuth = true;
-    startSession = false;
-  };
 
   programs.nix-ld.enable = true;
 
@@ -184,11 +176,8 @@
     nerd-fonts.ubuntu-mono
     nerd-fonts.commit-mono
     nerd-fonts.jetbrains-mono
-    nerd-fonts.comic-shanns-mono
     nerd-fonts.caskaydia-mono
     nerd-fonts.geist-mono
-    nerd-fonts.hasklug
-    nerd-fonts.sauce-code-pro
   ];
 
   # use 1password
@@ -210,10 +199,6 @@
     displaylink
     qmk
     uhk-agent
-    bluez
-    bluez-tools
-    wireplumber
-    pavucontrol
   ];
 
   # Enable the OpenSSH daemon.

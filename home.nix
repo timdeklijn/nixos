@@ -43,18 +43,6 @@ in
     wget
     unstable.codex
 
-    # Hyprland
-    unstable.blueman
-    unstable.grim
-    unstable.hyprpaper
-    unstable.hypridle
-    unstable.slurp
-    unstable.walker
-    unstable.wofi
-    unstable.xdg-desktop-portal-hyprland
-    unstable.xwayland
-    unstable.ashell
-
     # Python dev support
     unstable.ruff
     unstable.pyright
@@ -82,25 +70,6 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
-
-  # This will force slack to start in 'x-wayland' mode. This is required because
-  # it kept crashing in hyprland when run in wayland mode.
-  xdg.desktopEntries.slack = {
-    name = "Slack";
-    exec = "slack-xwayland %U"; # point desktop entry to the wrapper
-    terminal = false;
-    type = "Application";
-    categories = [
-      "Network"
-      "InstantMessaging"
-    ];
-    icon = "slack";
-  };
-
-  programs.hyprlock = {
-    enable = true;
-    package = pkgs.unstable.hyprlock;
-  };
 
   home.file.".gitconfig".text = ''
     [core]
@@ -130,18 +99,6 @@ in
     enable = true;
     defaultCacheTtl = 1800;
     enableSshSupport = true;
-  };
-
-  services.emacs.enable = true;
-  programs.emacs = {
-    enable = true;
-    package = pkgs.emacs;
-    extraPackages = (
-      epkgs: [
-        epkgs.vterm
-        epkgs.treesit-grammars.with-all-grammars
-      ]
-    );
   };
 
   programs.firefox.enable = true;
