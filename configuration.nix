@@ -86,6 +86,8 @@
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  services.desktopManager.cosmic.enable = true;
+
   systemd.services.displaylink-server = {
     enable = true;
     # Ensure it starts after udev has done its work
@@ -200,6 +202,9 @@
     qmk
     uhk-agent
   ];
+
+  # Example: Configure the COSMIC_DATA_CONTROL_ENABLED environment variable
+  environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
