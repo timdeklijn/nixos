@@ -23,7 +23,7 @@ in
     btop
     delta
     direnv
-    eza
+    unstable.eza
     fastfetch
     fd
     fzf
@@ -38,54 +38,36 @@ in
     tmux
     vim
     wget
-    yazi
-    zoxide
+    unstable.yazi
+    # unstable.zoxide
 
-    codex
+    unstable.codex
 
-    blueman
-    grim
-    hyprlock
-    hyprpaper
-    hypridle
-    slurp
-    walker
-    wofi
-    xdg-desktop-portal-hyprland
-    xwayland
+    unstable.blueman
+    unstable.grim
+    # unstable.hyprlock
+    unstable.hyprpaper
+    unstable.hypridle
+    unstable.slurp
+    unstable.walker
+    unstable.wofi
+    unstable.xdg-desktop-portal-hyprland
+    unstable.xwayland
 
     # Python dev support
-    ruff
-    pyright
-
-    # Language servers for JSON/YAML/Docker/Nix
-    yaml-language-server
-    vscode-langservers-extracted # includes json-language-server
-    dockerfile-language-server-nodejs
-    nixd
-
-    # Language servers for programming
-    docker-language-server
-    nodejs_24
-    nodePackages.vscode-json-languageserver
-    pyright
-    yaml-language-server
-    bash-language-server # Bash LSP
-    odin
-    ols
+    unstable.ruff
+    unstable.pyright
 
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
-    obsidian
-    orca-slicer
+    unstable.obsidian
+    unstable.orca-slicer
     slackXwl
     slack
-    spotify
-    variety
     networkmanagerapplet
-    zed-editor-fhs
-    tidal-hifi
+    unstable.zed-editor-fhs
+    unstable.tidal-hifi
   ];
 
   imports = [
@@ -93,13 +75,15 @@ in
     (import ./applications/kitty.nix { inherit myFont; })
     (import ./applications/tmux.nix { inherit pkgs; })
     (import ./applications/wllogout.nix { inherit pkgs; })
-    ./applications/shell.nix
+    (import ./applications/shell.nix { inherit pkgs; })
   ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 
+  # This will force slack to start in 'x-wayland' mode. This is required because
+  # it kept crashing in hyprland when run in wayland mode.
   xdg.desktopEntries.slack = {
     name = "Slack";
     exec = "slack-xwayland %U"; # point desktop entry to the wrapper
@@ -114,6 +98,7 @@ in
 
   programs.hyprlock = {
     enable = true;
+    package = pkgs.unstable.hyprlock;
   };
 
   home.file.".gitconfig".text = ''

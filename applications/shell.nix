@@ -1,9 +1,13 @@
+{ pkgs }:
 {
   # Startship prompt looks nice
   programs.starship.enable = true;
 
   # zoxide for faster jumping to and from folders
-  programs.zoxide.enable = true;
+  programs.zoxide = {
+    enable = true;
+    package = pkgs.unstable.zoxide; # or pkgs.zoxide, but pick one
+  };
 
   # search through history
   programs.fzf = {
