@@ -18,34 +18,34 @@ in
   home.homeDirectory = "/home/tim";
 
   home.packages = with pkgs; [
-    unstable.ashell
+
+    # AI coding
     # command line utilities
     btop
     delta
     direnv
-    unstable.eza
     fastfetch
     fd
     fzf
+    ghostty
     git
     git-lfs
-    ghostty
     jq
     just
     nixfmt-rfc-style
     ripgrep
     starship
     tmux
+    unstable.eza
+    unstable.jujutsu
+    unstable.yazi
     vim
     wget
-    unstable.yazi
-    # unstable.zoxide
-
     unstable.codex
 
+    # Hyprland
     unstable.blueman
     unstable.grim
-    # unstable.hyprlock
     unstable.hyprpaper
     unstable.hypridle
     unstable.slurp
@@ -53,6 +53,7 @@ in
     unstable.wofi
     unstable.xdg-desktop-portal-hyprland
     unstable.xwayland
+    unstable.ashell
 
     # Python dev support
     unstable.ruff
@@ -61,13 +62,13 @@ in
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
+    networkmanagerapplet
+    slack
+    slackXwl # custom wrapper for startup
     unstable.obsidian
     unstable.orca-slicer
-    slackXwl
-    slack
-    networkmanagerapplet
-    unstable.zed-editor-fhs
     unstable.tidal-hifi
+    unstable.zed-editor-fhs
   ];
 
   imports = [
