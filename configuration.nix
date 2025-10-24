@@ -86,7 +86,7 @@
   # services.displayManager.sddm.wayland.enable = true;
   # services.desktopManager.plasma6.enable = true;
   services.xserver = {
-    dpi = 120;
+    dpi = 240;
     desktopManager = {
       xterm.enable = false;
       xfce.enable = true;
