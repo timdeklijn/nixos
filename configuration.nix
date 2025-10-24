@@ -82,9 +82,9 @@
     mesa
   ];
 
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
+  # services.desktopManager.plasma6.enable = true;
   services.xserver = {
     desktopManager = {
       xterm.enable = false;
@@ -92,8 +92,13 @@
     };
   };
 
-  services.displayManager.defaultSession = "xfce";
-  services.desktopManager.cosmic.enable = true;
+  services.xserver.displayManager = {
+    defaultSession = "xfce";
+    lightdm.enable = true;
+  };
+
+  xdg.portal.wlr.enable = true;
+  # services.xdg.portal.enable = true;
 
   systemd.services.displaylink-server = {
     enable = true;
