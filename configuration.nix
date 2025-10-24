@@ -85,7 +85,14 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.xserver = {
+    desktopManager = {
+      xterm.enable = false;
+      xfce.enable = true;
+    };
+  };
 
+  services.displayManager.defaultSession = "xfce";
   services.desktopManager.cosmic.enable = true;
 
   systemd.services.displaylink-server = {
