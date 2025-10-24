@@ -89,7 +89,10 @@
     dpi = 240;
     desktopManager = {
       xterm.enable = false;
-      xfce.enable = true;
+      xfce = {
+        enable = true;
+        enableWaylandSession = true;
+      };
     };
   };
 
