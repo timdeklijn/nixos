@@ -82,22 +82,19 @@
     mesa
   ];
 
-  # services.displayManager.sddm.enable = true;
-  # services.displayManager.sddm.wayland.enable = true;
-  # services.desktopManager.plasma6.enable = true;
   services.xserver = {
     dpi = 240;
     desktopManager = {
       xterm.enable = false;
       xfce = {
         enable = true;
-        enableWaylandSession = true;
+        enableWaylandSession = false;
       };
     };
   };
 
+  services.displayManager.defaultSession = "xfce";
   services.xserver.displayManager = {
-    defaultSession = "xfce";
     lightdm.enable = true;
   };
 

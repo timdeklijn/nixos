@@ -43,6 +43,11 @@ in
     wget
     unstable.codex
 
+    # editors
+    unstable.jetbrains.idea-ultimate
+    unstable.zed-editor-fhs
+    unstable.vscode-fhs
+
     # Python dev support
     unstable.ruff
     unstable.pyright
@@ -50,17 +55,14 @@ in
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
-    networkmanagerapplet
-    slack
-    slackXwl # custom wrapper for startup
+    unstable.networkmanagerapplet
+    unstable.slack
     unstable.obsidian
     unstable.orca-slicer
     unstable.tidal-hifi
-    unstable.zed-editor-fhs
   ];
 
   imports = [
-    (import ./applications/vscode.nix { inherit pkgs myFont; })
     (import ./applications/kitty.nix { inherit myFont; })
     (import ./applications/tmux.nix { inherit pkgs; })
     (import ./applications/wllogout.nix { inherit pkgs; })
