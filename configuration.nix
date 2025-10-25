@@ -99,7 +99,6 @@
   };
 
   xdg.portal.wlr.enable = true;
-  # services.xdg.portal.enable = true;
 
   systemd.services.displaylink-server = {
     enable = true;
