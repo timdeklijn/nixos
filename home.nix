@@ -21,44 +21,44 @@ in
 
     # AI coding
     # command line utilities
-    btop
-    delta
-    direnv
     fastfetch
     fd
     fzf
-    ghostty
     git
     git-lfs
-    jq
-    just
     nixfmt-rfc-style
-    ripgrep
-    starship
     tmux
+    unstable.btop
+    unstable.codex
+    unstable.delta
+    direnv
     unstable.eza
+    unstable.jq
     unstable.jujutsu
+    unstable.just
+    unstable.ripgrep
+    starship
     unstable.yazi
     vim
     wget
-    unstable.codex
 
     # editors
     unstable.jetbrains.idea-ultimate
-    unstable.zed-editor-fhs
     unstable.vscode-fhs
+    unstable.zed-editor-fhs
 
     # Python dev support
+    unstable.pyright # TODO: remove?
     unstable.ruff
-    unstable.pyright
 
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
+    unstable.ghostty
     unstable.networkmanagerapplet
-    unstable.slack
     unstable.obsidian
     unstable.orca-slicer
+    unstable.slack
     unstable.tidal-hifi
   ];
 

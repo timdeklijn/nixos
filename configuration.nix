@@ -138,9 +138,9 @@
   };
 
   # configure mouse
-  services.xserver = {
-    libinput.enable = true;
-    libinput.touchpad = {
+  services.libinput = {
+    enable = true;
+    touchpad = {
       tapping = true;
       tappingButtonMap = "lrm"; # left-right-middle mapping
       clickMethod = "clickfinger"; # two-finger tap = right click
