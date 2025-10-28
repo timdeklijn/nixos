@@ -137,6 +137,16 @@
     '';
   };
 
+  # configure mouse
+  services.xserver = {
+    libinput.enable = true;
+    libinput.touchpad = {
+      tapping = true;
+      tappingButtonMap = "lrm"; # left-right-middle mapping
+      clickMethod = "clickfinger"; # two-finger tap = right click
+    };
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
