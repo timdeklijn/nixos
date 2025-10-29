@@ -6,12 +6,6 @@
 
 let
   myFont = "SauceCodePro Nerd Font Mono";
-  slackXwl = pkgs.writeShellScriptBin "slack-xwayland" ''
-    #!/usr/bin/env bash
-    set -euo pipefail
-    export NIXOS_OZONE_WL=0
-    exec ${pkgs.slack}/bin/slack "$@"
-  '';
 in
 {
   home.username = "tim";
@@ -105,9 +99,6 @@ in
 
   programs.firefox = {
     enable = true;
-    # preferences = {
-    #     "widget.gtk.libadwaita-colors.enabled" = false;
-    #   };
   };
 
   # This value determines the Home Manager release that your
