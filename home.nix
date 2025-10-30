@@ -87,14 +87,15 @@ in
 
     [delta]
         navigate = true  # use n and N to move between diff sections
-        dark = true      # or light = true, or omit for auto-detection
 
     [merge]
         conflictStyle = zdiff3
 
     [credential]
         helper = manager
+        credentialStore = secretservice
 
+    # This is RWS specific.
     [http "https://git.rws.nl"]
         sslCert = "~/git/rws/certificate/20251002-cert-csr.pem"
         sslKey = "~/git/rws/certificate/PRIVATE.key"
