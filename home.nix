@@ -125,11 +125,12 @@ in
     enable = true;
   };
 
+  xdg.enable = true;
   xdg.desktopEntries."microsoft-teams-pwa" = {
     name = "Microsoft Teams";
     genericName = "Teams";
     comment = "Microsoft Teams Progressive Web App";
-    exec = "${pkgs.google-chrome}/bin/chromium --app=https://teams.microsoft.com --class=MicrosoftTeams --name=MicrosoftTeams";
+    exec = "${pkgs.google-chrome}/bin/google-chrome-stable --app=https://teams.microsoft.com --class=MicrosoftTeams --name=MicrosoftTeams";
     icon = "microsoft-teams";
     categories = [
       "Network"
