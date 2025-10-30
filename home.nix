@@ -92,6 +92,9 @@ in
     [merge]
         conflictStyle = zdiff3
 
+    [credential]
+        helper = manager
+
     [http "https://git.rws.nl"]
         sslCert = "~/git/rws/certificate/20251002-cert-csr.pem"
         sslKey = "~/git/rws/certificate/PRIVATE.key"
