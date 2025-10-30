@@ -54,6 +54,16 @@ in
     unstable.orca-slicer
     unstable.slack
     unstable.tidal-hifi
+
+    gnome-tweaks
+    gnome-shell-extensions
+    gnome-tweaks
+    gnomeExtensions.appindicator
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.focus-follows-workspace
+    gnomeExtensions.search-light
+    gnomeExtensions.vitals
+    gnomeExtensions.open-bar
   ];
 
   imports = [
