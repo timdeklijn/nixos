@@ -49,6 +49,7 @@ in
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
+    google-chrome
     unstable.ghostty
     unstable.networkmanagerapplet
     unstable.obsidian
@@ -122,6 +123,20 @@ in
 
   programs.firefox = {
     enable = true;
+  };
+
+  xdg.desktopEntries."microsoft-teams-pwa" = {
+    name = "Microsoft Teams";
+    genericName = "Teams";
+    comment = "Microsoft Teams Progressive Web App";
+    exec = "${pkgs.google-chrome}/bin/chromium --app=https://teams.microsoft.com --class=MicrosoftTeams --name=MicrosoftTeams";
+    icon = "microsoft-teams";
+    categories = [
+      "Network"
+      "InstantMessaging"
+    ];
+    terminal = false;
+    startupNotify = true;
   };
 
   # This value determines the Home Manager release that your
