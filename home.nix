@@ -90,6 +90,14 @@ in
 
     [merge]
         conflictStyle = zdiff3
+
+    [http "https://git.rws.nl"]
+        sslCert = "~/git/rws/certificate/20251002-cert-csr.pem"
+        sslKey = "~/git/rws/certificate/PRIVATE.key"
+
+    [http "https://gitlab.at.rws.nl"]
+        sslCert = "~/git/rws/certificate/20251002-cert-csr.pem"
+        sslKey = "~/git/rws/certificate/PRIVATE.key"
   '';
 
   programs.ssh = {
