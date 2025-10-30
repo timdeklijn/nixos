@@ -19,6 +19,7 @@ in
     fd
     fzf
     git
+    git-credential-manager
     git-lfs
     nixfmt-rfc-style
     tmux
