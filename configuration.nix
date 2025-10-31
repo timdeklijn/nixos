@@ -210,6 +210,7 @@
     uhk-agent
     adwaita-icon-theme # GNOME’s default icons
     hicolor-icon-theme # fallback for many apps
+    gnome-themes-extra
   ];
 
   # Example: Configure the COSMIC_DATA_CONTROL_ENABLED environment variable
