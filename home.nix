@@ -66,6 +66,7 @@ in
     gnomeExtensions.search-light
     gnomeExtensions.vitals
     gnomeExtensions.open-bar
+    gnomeExtensions.night-theme-switcher
   ];
 
   imports = [
@@ -126,6 +127,8 @@ in
   };
 
   xdg.enable = true;
+
+  # Create a microsoft teams PWA. This way I do not require a browser tab to be open.
   xdg.desktopEntries."microsoft-teams-pwa" = {
     name = "Microsoft Teams";
     genericName = "Teams";
@@ -139,6 +142,8 @@ in
     terminal = false;
     startupNotify = true;
   };
+
+  # TODO: create a PWA for microsoft outlook
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

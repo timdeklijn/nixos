@@ -25,9 +25,23 @@
     };
     "org/gnome/desktop/default-applications/browser" = {
       # Zen (flatpak) is my default browser
-      exec = "flatpak run app.zen_browser.zen";
-      name = "Zen Browser";
+      exec = "google-chrome-stable";
+      name = "Google Chrome";
     };
+    "org/gnome/shell/extensions/nightthemeswitcher" = {
+      enabled = true;
+      # Options: "manual", "sunrise-sunset", "location", etc.
+      schedule = "sunrise-sunset";
+      themes = true;
+      gtk-theme-dark = "Adwaita-dark";
+      gtk-theme-light = "Adwaita";
+      wallpaper = false;
+      shell = true;
+      shell-theme-dark = "Adwaita-dark";
+      shell-theme-light = "Adwaita";
+      notifications = true;
+    };
+    # (Optional) Notification settings
     "org/gnome/settings-daemon/plugins/power" = {
       ambient-enabled = false;
     };
