@@ -21,6 +21,7 @@
         "search-light@icedman.org"
         "focus-follows-workspace@christopher.luebbemeier.gmail.com"
         "openbar@neuromorph"
+        "nightthemeswitcher@romainvigier.fr"
       ];
     };
     "org/gnome/desktop/default-applications/browser" = {
@@ -102,7 +103,6 @@
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false;
     };
-
   };
 
   xdg.mimeApps = {
