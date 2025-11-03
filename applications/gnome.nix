@@ -92,6 +92,15 @@
       enable-hot-corners = false;
       show-battery-percentage = true;
     };
+    "org/gnome/shell/app-switcher" = {
+      # Make Alt+Tab show only current workspace
+      current-workspace-only = true;
+    };
+
+    # Optional: also limit the *window* switcher
+    "org/gnome/shell/window-switcher" = {
+      current-workspace-only = true;
+    };
     "org/gnome/shell/extensions/open-bar" = {
       "bar-type" = 2;
       "neon-glow" = false;
