@@ -122,6 +122,18 @@ in
     enableSshSupport = true;
   };
 
+  services.emacs.enable = true;
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs;
+    extraPackages = (
+      epkgs: [
+        epkgs.vterm
+        epkgs.treesit-grammars.with-all-grammars
+      ]
+    );
+  };
+
   programs.firefox = {
     enable = true;
   };
