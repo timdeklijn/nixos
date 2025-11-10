@@ -97,6 +97,12 @@ in
         helper = manager
         credentialStore = secretservice
 
+    [filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+
     # This is RWS specific.
     [http "https://git.rws.nl"]
         sslCert = "~/git/rws/certificate/20251002-cert-csr.pem"
