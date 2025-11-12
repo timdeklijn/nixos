@@ -29,6 +29,7 @@
 
       set -g default-terminal "tmux-256color"
       set -g status-style "bg=default fg=colour5"
+      set-option -g status-position top
     '';
   };
 }
