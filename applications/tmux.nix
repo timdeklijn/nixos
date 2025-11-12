@@ -31,6 +31,7 @@
           set -g @dracula-show-weather false
           # set -g @dracula-show-fahrenheit false
           # set -g @dracula-show-location false
+
         '';
       }
     ];
@@ -50,6 +51,7 @@
       bind -r K resize-pane -U 5
       bind -r L resize-pane -R 5
 
+      set -g default-terminal "tmux-256color"
     '';
   };
 }
