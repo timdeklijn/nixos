@@ -35,6 +35,8 @@
       # set -g default-terminal "tmux-256color"
       set -g status-style "bg=default fg=colour10"
       set-option -g status-position top
+
+      bind-key C-f display-popup -E "tms"
     '';
   };
 }
