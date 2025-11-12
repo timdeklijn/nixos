@@ -34,16 +34,16 @@ in
     unstable.ripgrep
     starship
     unstable.yazi
+    unstable.helix
     vim
     wget
 
     # editors
     unstable.jetbrains.idea-ultimate
     unstable.vscode-fhs
-    unstable.zed-editor-fhs
 
     # Python dev support
-    unstable.pyright # TODO: remove?
+    unstable.pyright
     unstable.ruff
 
     # 'GUI' programs
