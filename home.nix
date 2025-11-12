@@ -34,14 +34,14 @@ in
     unstable.ripgrep
     starship
     unstable.yazi
-    unstable.helix
     unstable.lazygit
+    unstable.tmux-sessionizer
     vim
     wget
 
     # editors
-    unstable.jetbrains.idea-ultimate
     unstable.vscode-fhs
+    unstable.helix
 
     # Python dev support
     unstable.pyright
