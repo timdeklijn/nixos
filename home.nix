@@ -35,6 +35,7 @@ in
     starship
     unstable.yazi
     unstable.helix
+    unstable.lazygit
     vim
     wget
 

@@ -47,13 +47,11 @@
       ls = "eza";
       ll = "eza -la";
       y = "yazi";
-      s = "subl";
-      zed = "zeditor";
       h = "hx";
+      lg = "lazygit";
     };
     # This should help being able to use git within devcontainers withou
     # running this command manually.
-    # NOTE: this does not work...
     initContent = ''
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
       # ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
