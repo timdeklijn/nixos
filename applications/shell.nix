@@ -49,6 +49,7 @@
       y = "yazi";
       s = "subl";
       zed = "zeditor";
+      h = "hx";
     };
     # This should help being able to use git within devcontainers withou
     # running this command manually.
