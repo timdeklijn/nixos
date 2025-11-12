@@ -28,6 +28,7 @@
       bind -r L resize-pane -R 5
 
       set -g default-terminal "tmux-256color"
+      set -g status-style bg=default fg=colour1
     '';
   };
 }
