@@ -45,6 +45,7 @@ in
 
     # Python dev support
     unstable.pyright
+    unstable.ruff
 
     # 'GUI' programs
     audacity
