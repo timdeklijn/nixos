@@ -10,10 +10,8 @@
     prefix = "C-a";
     sensibleOnTop = true;
     escapeTime = 1;
-    baseIndex = 1;
+    baseIndex = 0;
     extraConfig = ''
-      set-option -g status-position bottom
-
       # reload config
       bind r source-file ~/.config/tmux/tmux.conf\; display "Reloaded!"
 
@@ -21,6 +19,7 @@
       bind | split-window -h -c "#{pane_current_path}"
       bind _ split-window -v -c "#{pane_current_path}"
 
+      # select pane by pressing `<C-a>-hjkl`
       bind -r h select-pane -L
       bind -r j select-pane -D
       bind -r k select-pane -U
@@ -32,11 +31,13 @@
       bind -r K resize-pane -U 5
       bind -r L resize-pane -R 5
 
-      # set -g default-terminal "tmux-256color"
       set -g status-style "bg=default fg=colour10"
+      set -g status-left-length 40
       set-option -g status-position top
 
+      # Toggle last window
       bind-key -r o last-window
+      # open `tmux-sessionizer` in a pop-up window.
       bind-key C-f display-popup -E "tms"
     '';
   };
