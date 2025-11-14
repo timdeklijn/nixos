@@ -49,6 +49,7 @@
       y = "yazi";
       h = "hx";
       lg = "lazygit";
+			vim = "nvim";
     };
     # This should help being able to use git within devcontainers withou
     # running this command manually.

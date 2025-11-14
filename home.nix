@@ -47,6 +47,10 @@ in
     unstable.pyright
     unstable.ruff
 
+    # Lua
+    unstable.stylua
+    unstable.lua-language-server
+
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
