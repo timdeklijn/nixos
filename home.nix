@@ -37,6 +37,7 @@ in
     unstable.lazygit
     unstable.tmux-sessionizer
     unstable.neovim
+    unstable.gcc
     wget
 
     # editors
