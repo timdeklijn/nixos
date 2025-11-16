@@ -52,6 +52,9 @@ in
     unstable.stylua
     unstable.lua-language-server
 
+    # go
+    unstable.gopls
+
     # 'GUI' programs
     audacity
     citrix_workspace # needs a manual download due to enduser license agreements
