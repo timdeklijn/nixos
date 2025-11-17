@@ -25,6 +25,7 @@ in
     tmux
     unstable.btop
     unstable.codex
+    unstable.opencode
     unstable.delta
     direnv
     unstable.eza
