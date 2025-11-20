@@ -189,6 +189,7 @@
     nerd-fonts.geist-mono
     nerd-fonts.martian-mono
     nerd-fonts.daddy-time-mono
+    nerd-fonts.sauce-code-pro
   ];
 
   # use 1password
