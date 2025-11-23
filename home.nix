@@ -43,6 +43,7 @@ in
 
     # editors
     unstable.vscode-fhs
+    unstable.zed-editor-fhs
     unstable.helix
 
     # Python dev support
