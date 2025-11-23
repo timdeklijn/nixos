@@ -49,14 +49,15 @@
       y = "yazi";
       h = "hx";
       lg = "lazygit";
-			vim = "nvim";
+      vim = "nvim";
+      zeditor = "z";
     };
     # This should help being able to use git within devcontainers withou
     # running this command manually.
     initContent = ''
-      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-      # ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
-			PATH=/usr/local/bin:/usr/local/share:$PATH
+            ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+            # ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
+      			PATH=/usr/local/bin:/usr/local/share:$PATH
     '';
   };
 
