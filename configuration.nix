@@ -58,7 +58,7 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver = {
     videoDrivers = [
-      "amd"
+      "amdgpu"
       "displaylink"
       "modesetting"
     ];
@@ -82,13 +82,13 @@
     mesa
   ];
 
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm.enable = false;
+  services.displayManager.sddm.wayland.enable = false;
   services.desktopManager.plasma6.enable = true;
-  # services.displayManager.cosmic-greeter.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
   services.desktopManager.cosmic.enable = true;
 
-  xdg.portal.wlr.enable = true;
+  # xdg.portal.wlr.enable = true;
 
   systemd.services.displaylink-server = {
     enable = true;
