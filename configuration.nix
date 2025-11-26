@@ -178,10 +178,12 @@
       "docker"
     ];
     # Set default shell
-    shell = pkgs.zsh;
+    # shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
+  programs.fish.enable = true;
   # download nerd fonts
   fonts.packages = with pkgs; [
     nerd-fonts.iosevka-term

@@ -31,7 +31,7 @@
 
     # Save zsh config files here.
     # FIXME: Will be deprecated.
-    # dotDir = ".config/zsh";
+    dotDir = ".config/zsh";
 
     # Add my zsh aliases. Requires `eza`.
     shellAliases = {
