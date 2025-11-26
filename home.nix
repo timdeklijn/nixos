@@ -41,6 +41,7 @@ in
     unstable.gcc
     unstable.wl-clipboard
     unstable.azure-cli
+    unstable.claude-code
     wget
 
     # editors

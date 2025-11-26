@@ -161,6 +161,7 @@
     #media-session.enable = true;
   };
   services.fprintd.enable = true;
+  security.pam.services.sddm.fprintAuth = false;
 
   services.seatd.enable = true;
 
