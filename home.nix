@@ -39,6 +39,7 @@ in
     unstable.tmux-sessionizer
     unstable.neovim
     unstable.gcc
+    unstable.wl-clipboard
     wget
 
     # editors
