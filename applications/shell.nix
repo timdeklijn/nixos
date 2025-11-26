@@ -48,6 +48,7 @@
       rgi = "rg -i";
       ff = "fd -H";
       t = "tmux";
+      dexauth = "set -x AUTHORIZATION \"Bearer \"(az account get-access-token --resource https://cognitiveservices.azure.com/ --query accessToken -o tsv)";
     };
     shellAbbrs = {
       gco = "git checkout";
