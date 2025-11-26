@@ -78,7 +78,7 @@
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
   hardware.graphics.extraPackages = with pkgs; [
-    amdvlk # Or another vulkan driver like radeon-vulkan
+    # amdvlk # Or another vulkan driver like radeon-vulkan
     mesa
   ];
   services.xserver.displayManager.gdm.enable = true;
@@ -162,6 +162,8 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  # TODO: remove
+  nixpkgs.config.allowBroken = true;
 
   programs.nix-ld.enable = true;
 
