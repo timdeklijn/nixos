@@ -70,17 +70,18 @@ in
     unstable.orca-slicer
     unstable.slack
     unstable.tidal-hifi
+    unstable.gnome-calendar
 
-    gnome-tweaks
-    gnome-shell-extensions
-    gnome-tweaks
-    gnomeExtensions.appindicator
-    gnomeExtensions.dash-to-panel
-    gnomeExtensions.focus-follows-workspace
-    gnomeExtensions.search-light
-    gnomeExtensions.vitals
-    gnomeExtensions.open-bar
-    gnomeExtensions.night-theme-switcher
+    # gnome-tweaks
+    # gnome-shell-extensions
+    # gnome-tweaks
+    # gnomeExtensions.appindicator
+    # gnomeExtensions.dash-to-panel
+    # gnomeExtensions.focus-follows-workspace
+    # gnomeExtensions.search-light
+    # gnomeExtensions.vitals
+    # gnomeExtensions.open-bar
+    # gnomeExtensions.night-theme-switcher
   ];
 
   imports = [
