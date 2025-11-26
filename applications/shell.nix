@@ -19,7 +19,7 @@
   programs.direnv.enable = true;
 
   # nicer looking git diffs
-  programs.git.delta.enable = true;
+  programs.delta.enable = true;
   programs.zsh = {
     # This should be set to true, even if it is set to configuration.nix.
     enable = true;
@@ -31,7 +31,7 @@
 
     # Save zsh config files here.
     # FIXME: Will be deprecated.
-    dotDir = ".config/zsh";
+    # dotDir = ".config/zsh";
 
     # Add my zsh aliases. Requires `eza`.
     shellAliases = {
