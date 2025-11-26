@@ -7,6 +7,7 @@
   programs.zoxide = {
     enable = true;
     package = pkgs.unstable.zoxide; # or pkgs.zoxide, but pick one
+    enableFishIntegration = true;
   };
 
   # search through history
@@ -16,50 +17,58 @@
   };
 
   # auto source .envrc file
-  programs.direnv.enable = true;
+  programs.direnv = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 
   # nicer looking git diffs
   programs.delta.enable = true;
-  programs.zsh = {
-    # This should be set to true, even if it is set to configuration.nix.
-    enable = true;
 
-    autocd = true;
-    autosuggestion.enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
+  programs.fish = {
 
-    # Save zsh config files here.
-    # FIXME: Will be deprecated.
-    dotDir = ".config/zsh";
-
-    # Add my zsh aliases. Requires `eza`.
-    shellAliases = {
-      ga = "git add";
-      gs = "git status";
-      gc = "git commit";
-      gp = "git push";
-      gP = "git pull";
-      gl = "git log";
-      k = "kubectl";
-      kc = "kubectl ctx";
-      kn = "kubectl ns";
-      ls = "eza";
-      ll = "eza -la";
-      y = "yazi";
-      h = "hx";
-      lg = "lazygit";
-      vim = "nvim";
-      zed = "zeditor";
-    };
-    # This should help being able to use git within devcontainers withou
-    # running this command manually.
-    initContent = ''
-            ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-            # ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
-      			PATH=/usr/local/bin:/usr/local/share:$PATH
-            export EDITOR="nvim"
-    '';
   };
+
+  # programs.zsh = {
+  #   # This should be set to true, even if it is set to configuration.nix.
+  #   enable = true;
+
+  #   autocd = true;
+  #   autosuggestion.enable = true;
+  #   enableCompletion = true;
+  #   syntaxHighlighting.enable = true;
+
+  #   # Save zsh config files here.
+  #   # FIXME: Will be deprecated.
+  #   dotDir = ".config/zsh";
+
+  #   # Add my zsh aliases. Requires `eza`.
+  #   shellAliases = {
+  #     ga = "git add";
+  #     gs = "git status";
+  #     gc = "git commit";
+  #     gp = "git push";
+  #     gP = "git pull";
+  #     gl = "git log";
+  #     k = "kubectl";
+  #     kc = "kubectl ctx";
+  #     kn = "kubectl ns";
+  #     ls = "eza";
+  #     ll = "eza -la";
+  #     y = "yazi";
+  #     h = "hx";
+  #     lg = "lazygit";
+  #     vim = "nvim";
+  #     zed = "zeditor";
+  #   };
+  #   # This should help being able to use git within devcontainers withou
+  #   # running this command manually.
+  #   initContent = ''
+  #           ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+  #           # ssh-add $HOME/.ssh/id_rsa > /dev/null 2>&1 &
+  #     			PATH=/usr/local/bin:/usr/local/share:$PATH
+  #           export EDITOR="nvim"
+  #   '';
+  # };
 
 }
