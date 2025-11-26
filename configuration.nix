@@ -81,8 +81,8 @@
     # amdvlk # Or another vulkan driver like radeon-vulkan
     mesa
   ];
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic.enable = true;
 
   xdg.portal.wlr.enable = true;
 
