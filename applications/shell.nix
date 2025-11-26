@@ -17,19 +17,20 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+    enableFishIntegration = true;
   };
 
   # auto source .envrc file
   programs.direnv = {
     enable = true;
-    enableFishIntegration = true;
+    # enableFishIntegration = true;
   };
 
   # nicer looking git diffs
   programs.delta.enable = true;
 
   programs.fish = {
-
+    enable = true;
   };
 
   # programs.zsh = {

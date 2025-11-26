@@ -81,9 +81,12 @@
     # amdvlk # Or another vulkan driver like radeon-vulkan
     mesa
   ];
+
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
+  # services.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic.enable = true;
 
   xdg.portal.wlr.enable = true;
 
@@ -168,7 +171,7 @@
 
   programs.nix-ld.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user acount. Don't forget to set a password with ‘passwd’.
   users.users.tim = {
     isNormalUser = true;
     description = "Tim de Klijn";
