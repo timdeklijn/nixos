@@ -1,7 +1,10 @@
 { pkgs }:
 {
   # Startship prompt looks nice
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 
   # zoxide for faster jumping to and from folders
   programs.zoxide = {
