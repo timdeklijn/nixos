@@ -40,6 +40,7 @@ in
     unstable.neovim
     unstable.gcc
     unstable.wl-clipboard
+    unstable.azure-cli
     wget
 
     # editors
