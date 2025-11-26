@@ -136,6 +136,7 @@ in
     # `~/.ssh/config`. These is some weird way to write a file on change, but
     # for now that seems like a hassle.
     enable = true;
+    enableDefaultConfig = false;
   };
   home.file.".ssh/config".enable = false;
 

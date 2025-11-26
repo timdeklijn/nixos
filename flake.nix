@@ -38,7 +38,7 @@
                 # 👇 Add the unstable overlay here
                 (final: prev: {
                   unstable = import unstable {
-                    inherit (prev) system;
+                    inherit (prev.stdenv.hostPlatform) system;
                     config.allowUnfree = true; # optional
                   };
                 })
