@@ -28,9 +28,9 @@
   # NOTE: somehow this did not work with linux kernel version 6.17 and
   # 'displaylink'
   # boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [
-    "amdgpu.dcdebugmask=0x10"
-  ];
+  # boot.kernelParams = [
+  #   "amdgpu.dcdebugmask=0x10"
+  # ];
   services.power-profiles-daemon.enable = true;
 
   networking.hostName = "fw13"; # Define your hostname.
@@ -87,6 +87,12 @@
   services.desktopManager.plasma6.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
   services.desktopManager.cosmic.enable = true;
+
+  systemd.services.display-manager.environment = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    COSMIC_LOG = "trace";
+    RUST_LOG = "info,cosmic_comp=trace,cosmic_greeter=trace";
+  };
 
   # xdg.portal.wlr.enable = true;
 
@@ -163,6 +169,8 @@
     #media-session.enable = true;
   };
   services.fprintd.enable = true;
+
+  services.seatd.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
