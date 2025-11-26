@@ -31,6 +31,33 @@
 
   programs.fish = {
     enable = true;
+    shellAliases = {
+      ls = "eza";
+      ll = "eza -la";
+      y = "yazi";
+      h = "hx";
+      lg = "lazygit";
+      vim = "nvim";
+      zed = "zeditor";
+      nrs = "sudo nixos-rebuild switch --flake .#fw13";
+      hms = "home-manager switch --flake .#tim@fw13";
+      lt = "eza -la --tree --level=2";
+      c = "clear";
+      copy = "wl-copy";
+      paste = "wl-paste -n";
+      rgi = "rg -i";
+      ff = "fd -H";
+      t = "tmux";
+    };
+    shellAbbrs = {
+      gco = "git checkout";
+      gc = "git commit";
+      gp = "git push";
+      gst = "git status";
+      k = "kubectl";
+      kgp = "kubectl get pods -A";
+      kgn = "kubectl get ns";
+    };
   };
 
   # programs.zsh = {
