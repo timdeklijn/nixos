@@ -85,8 +85,7 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
-
-  # xdg.portal.wlr.enable = true;
+  programs.kdeconnect.enable = true;
 
   systemd.services.displaylink-server = {
     enable = true;
