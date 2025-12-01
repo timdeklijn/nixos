@@ -194,6 +194,7 @@
     nerd-fonts.commit-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-mono
+    nerd-fonts.caskaydia-cove
     nerd-fonts.geist-mono
     nerd-fonts.martian-mono
     nerd-fonts.daddy-time-mono
