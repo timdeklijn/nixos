@@ -66,6 +66,7 @@ in
     # 'GUI' programs
     audacity
     # citrix_workspace # needs a manual download due to enduser license agreements
+    unstable.distrobox
     google-chrome
     unstable.ghostty
     unstable.networkmanagerapplet
