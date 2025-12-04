@@ -23,7 +23,6 @@
   # auto source .envrc file
   programs.direnv = {
     enable = true;
-    # enableFishIntegration = true;
   };
 
   # nicer looking git diffs

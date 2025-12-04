@@ -25,7 +25,6 @@ in
     tmux
     unstable.btop
     unstable.codex
-    unstable.aider-chat
     unstable.opencode
     unstable.delta
     direnv
@@ -42,24 +41,12 @@ in
     unstable.gcc
     unstable.wl-clipboard
     unstable.azure-cli
-    unstable.claude-code
     wget
 
     # editors
     unstable.vscode-fhs
     unstable.zed-editor-fhs
     unstable.helix
-
-    # Python dev support
-    unstable.pyright
-    unstable.ruff
-
-    # Lua
-    unstable.stylua
-    unstable.lua-language-server
-
-    # go
-    unstable.gopls
 
     # nix
     unstable.nixd
