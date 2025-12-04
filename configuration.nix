@@ -200,6 +200,7 @@
     nerd-fonts.daddy-time-mono
     nerd-fonts.sauce-code-pro
     nerd-fonts.victor-mono
+    nerd-fonts.fantasque-sans-mono
   ];
 
   # use 1password
@@ -263,7 +264,7 @@
   };
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 8000 ];
+  # networking.firewall.allowedTCPPorts = [ 8000 ];
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
