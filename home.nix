@@ -53,16 +53,16 @@ in
 
     # 'GUI' programs
     audacity
-    # citrix_workspace # needs a manual download due to enduser license agreements
-    unstable.distrobox
     google-chrome
+    unstable.distrobox
     unstable.ghostty
+    unstable.gnome-calendar
+    unstable.logseq
     unstable.networkmanagerapplet
     unstable.obsidian
     unstable.orca-slicer
     unstable.slack
     unstable.tidal-hifi
-    unstable.gnome-calendar
 
     # gnome-tweaks
     # gnome-shell-extensions
