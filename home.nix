@@ -48,6 +48,8 @@ in
     unstable.zed-editor-fhs
     unstable.helix
 
+    unstable.sublime-merge
+
     # nix
     unstable.nixd
 
