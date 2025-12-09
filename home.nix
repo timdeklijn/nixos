@@ -48,7 +48,7 @@ in
     unstable.zed-editor-fhs
     unstable.helix
 
-    unstable.smartgit
+    unstable.git-cola
 
     # nix
     unstable.nixd
