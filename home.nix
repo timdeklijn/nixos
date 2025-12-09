@@ -52,6 +52,7 @@ in
 
     # nix
     unstable.nixd
+    unstable.uv
 
     # 'GUI' programs
     audacity

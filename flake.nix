@@ -35,7 +35,6 @@
             home-manager.nixosModules.home-manager
             {
               nixpkgs.overlays = [
-                # 👇 Add the unstable overlay here
                 (final: prev: {
                   unstable = import unstable {
                     inherit (prev.stdenv.hostPlatform) system;

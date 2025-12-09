@@ -209,10 +209,6 @@
     enable = true;
     polkitPolicyOwners = [ "tim" ];
   };
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "libsoup-2.74.3"
-  #   "openssl-1.1.1w"
-  # ];
 
   # Global packages
   environment.systemPackages = with pkgs; [
