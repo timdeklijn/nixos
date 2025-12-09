@@ -47,6 +47,8 @@ in
     unstable.vscode-fhs
     unstable.zed-editor-fhs
     unstable.helix
+    unstable.sublime
+    unstable.sublime-merge
 
     # nix
     unstable.nixd
