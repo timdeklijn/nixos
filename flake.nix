@@ -40,6 +40,10 @@
                   unstable = import unstable {
                     inherit (prev.stdenv.hostPlatform) system;
                     config.allowUnfree = true; # optional
+                    config.permittedInsecurePackages = [
+                      "libsoup-2.74.3"
+                      "openssl-1.1.1w"
+                    ];
                   };
                 })
               ];
