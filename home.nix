@@ -48,8 +48,6 @@ in
     unstable.zed-editor-fhs
     unstable.helix
 
-    unstable.git-cola
-
     # nix
     unstable.nixd
 
