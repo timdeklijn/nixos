@@ -43,6 +43,7 @@ in
     unstable.wl-clipboard
     unstable.azure-cli
     wget
+    lsof
 
     # editors
     unstable.vscode-fhs
