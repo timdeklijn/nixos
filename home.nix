@@ -68,6 +68,7 @@ in
     unstable.orca-slicer
     unstable.slack
     unstable.tidal-hifi
+    kdePackages.isoimagewriter
 
     # gnome-tweaks
     # gnome-shell-extensions
