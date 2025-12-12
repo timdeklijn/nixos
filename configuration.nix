@@ -201,7 +201,7 @@
     nerd-fonts.sauce-code-pro
     nerd-fonts.victor-mono
     nerd-fonts.fantasque-sans-mono
-    nerd-fonts.fira-mono
+    nerd-fonts.fira-code
   ];
 
   # use 1password
