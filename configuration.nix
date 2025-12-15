@@ -189,7 +189,6 @@
   programs.fish.enable = true;
   # download nerd fonts
   fonts.packages = with pkgs; [
-    nerd-fonts.iosevka-term
     nerd-fonts.ubuntu-mono
     nerd-fonts.commit-mono
     nerd-fonts.jetbrains-mono
@@ -201,7 +200,7 @@
     nerd-fonts.sauce-code-pro
     nerd-fonts.victor-mono
     nerd-fonts.fantasque-sans-mono
-    nerd-fonts.fira-code
+    nerd-fonts.roboto-mono
   ];
 
   # use 1password
