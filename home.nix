@@ -27,7 +27,6 @@ in
     unstable.codex
     unstable.goose-cli
     unstable.opencode
-    unstable.delta
     direnv
     unstable.eza
     unstable.jq
@@ -48,7 +47,7 @@ in
     # editors
     unstable.vscode-fhs
     unstable.zed-editor-fhs
-    unstable.helix
+    unstable.flow-control
     unstable.sublime-merge
     unstable.sublime4
 
