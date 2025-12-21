@@ -48,6 +48,7 @@ in
     unstable.vscode-fhs
     unstable.zed-editor-fhs
     unstable.flow-control
+    unstable.helix
     unstable.sublime-merge
     unstable.sublime4
 
@@ -60,7 +61,7 @@ in
     google-chrome
     unstable.distrobox
     unstable.ghostty
-    unstable.gnome-calendar
+    unstable.foot
     unstable.logseq
     unstable.networkmanagerapplet
     unstable.obsidian
