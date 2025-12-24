@@ -30,14 +30,12 @@ in
     direnv
     unstable.eza
     unstable.jq
-    unstable.jujutsu
     unstable.just
     unstable.ripgrep
     starship
     unstable.yazi
     unstable.lazygit
     unstable.tmux-sessionizer
-    unstable.neovim
     unstable.gcc
     unstable.wl-clipboard
     unstable.azure-cli
@@ -47,14 +45,16 @@ in
     # editors
     unstable.vscode-fhs
     unstable.zed-editor-fhs
-    unstable.flow-control
     unstable.helix
+    unstable.helix-gpt
+    unstable.zellij
     unstable.sublime-merge
     unstable.sublime4
 
-    # nix
     unstable.nixd
     unstable.uv
+    unstable.ty
+    unstable.ruff
 
     # 'GUI' programs
     audacity
