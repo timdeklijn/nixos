@@ -55,6 +55,7 @@ in
     unstable.uv
     unstable.ty
     unstable.ruff
+    unstable.rust-analyzer
 
     # 'GUI' programs
     audacity
