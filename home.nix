@@ -46,7 +46,7 @@ in
     unstable.vscode-fhs
     unstable.zed-editor-fhs
     unstable.helix
-    unstable.helix-gpt
+    unstable.neovim
     unstable.zellij
     unstable.sublime-merge
     unstable.sublime4
@@ -62,6 +62,7 @@ in
     unstable.distrobox
     unstable.ghostty
     unstable.foot
+    unstable.wezterm
     unstable.logseq
     unstable.networkmanagerapplet
     unstable.obsidian
