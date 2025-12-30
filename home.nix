@@ -88,7 +88,7 @@ in
   ];
 
   imports = [
-    (import ./applications/kitty.nix { inherit myFont; })
+    # (import ./applications/kitty.nix { inherit myFont; })
     (import ./applications/tmux.nix { inherit pkgs; })
     (import ./applications/wllogout.nix { inherit pkgs; })
     (import ./applications/shell.nix { inherit pkgs; })
