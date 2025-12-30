@@ -10,6 +10,9 @@ in
 {
   home.username = "tim";
   home.homeDirectory = "/home/tim";
+  home.sessionPath = [
+    "/usr/local/bin/"
+  ];
 
   home.packages = with pkgs; [
 
