@@ -66,6 +66,7 @@ in
     unstable.distrobox
     unstable.ghostty
     unstable.foot
+    unstable.kitty
     unstable.wezterm
     unstable.logseq
     unstable.networkmanagerapplet
