@@ -10,9 +10,6 @@ in
 {
   home.username = "tim";
   home.homeDirectory = "/home/tim";
-  home.sessionPath = [
-    "/usr/local/bin/"
-  ];
 
   home.packages = with pkgs; [
 
@@ -62,6 +59,9 @@ in
     unstable.rust-analyzer
     unstable.stylua
     unstable.lua-language-server
+    unstable.docker-language-server
+    unstable.yaml-language-server
+    unstable.vscode-json-languageserver
 
     # 'GUI' programs
     audacity
