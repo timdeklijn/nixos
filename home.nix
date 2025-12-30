@@ -46,7 +46,7 @@ in
     unstable.vscode-fhs
     unstable.zed-editor-fhs
     unstable.helix
-    unstable.flow-control
+    # unstable.flow-control
     unstable.neovim
     unstable.zellij
     unstable.sublime-merge
