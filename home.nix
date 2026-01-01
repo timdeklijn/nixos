@@ -21,6 +21,7 @@ in
     git
     git-credential-manager
     git-lfs
+    glib # light/dark theme detection
     nixfmt-rfc-style
     tmux
     unstable.btop
@@ -76,7 +77,7 @@ in
     unstable.obsidian
     unstable.orca-slicer
     unstable.slack
-    unstable.tidal-hifi
+    # unstable.tidal-hifi
     kdePackages.isoimagewriter
 
     # gnome-tweaks
