@@ -179,6 +179,8 @@
       "networkmanager"
       "wheel"
       "docker"
+      "libvirtd"
+      "kvm"
     ];
     # Set default shell
     # shell = pkgs.zsh;
@@ -221,6 +223,8 @@
     adwaita-icon-theme # GNOME’s default icons
     hicolor-icon-theme # fallback for many apps
     gnome-themes-extra
+    qemu_kvm
+    virtiofsd
   ];
 
   # Enable the OpenSSH daemon.
@@ -232,6 +236,13 @@
     enable = true;
     extraPackages = [ pkgs.openssh ];
   };
+  virtualisation.libvirtd.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
+  programs.virt-manager.enable = true;
   # programs.ssh.startAgent = true;
 
   # This is required to get the right drivers fro my framework laptop
