@@ -185,6 +185,18 @@
     # Set default shell
     # shell = pkgs.zsh;
     shell = pkgs.fish;
+    subUidRanges = [
+      {
+        startUid = 100000;
+        count = 65536;
+      }
+    ];
+    subGidRanges = [
+      {
+        startGid = 100000;
+        count = 65536;
+      }
+    ];
   };
 
   # programs.zsh.enable = true;
@@ -239,7 +251,7 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.podman = {
     enable = true;
-    dockerCompat = true;
+    dockerCompat = false;
   };
 
   programs.virt-manager.enable = true;
