@@ -28,6 +28,7 @@ in
     unstable.codex
     unstable.goose-cli
     unstable.opencode
+    unstable.crush
     direnv
     unstable.eza
     unstable.jq
