@@ -44,6 +44,7 @@ in
     unstable.devpod
     wget
     lsof
+    gnumake
 
     # editors
     unstable.vscode-fhs
