@@ -252,6 +252,7 @@
   virtualisation.podman = {
     enable = true;
     dockerCompat = false;
+    defaultNetwork.settings.dns_enabled = true;
   };
 
   programs.virt-manager.enable = true;
