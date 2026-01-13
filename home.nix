@@ -106,26 +106,26 @@ in
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 
-  home.file.".gitconfig".text = ''
-     [credential]
-        helper = manager
-        credentialStore = secretservice
+  # home.file.".gitconfig".text = ''
+  #    [credential]
+  #       helper = manager
+  #       credentialStore = secretservice
 
-    [filter "lfs"]
-        clean = git-lfs clean -- %f
-        smudge = git-lfs smudge -- %f
-        process = git-lfs filter-process
-        required = true
+  #   [filter "lfs"]
+  #       clean = git-lfs clean -- %f
+  #       smudge = git-lfs smudge -- %f
+  #       process = git-lfs filter-process
+  #       required = true
 
-    # This is RWS specific.
-    [http "https://git.rws.nl"]
-        sslCert = "~/git/rws/certificate/20251002-cert-csr.pem"
-        sslKey = "~/git/rws/certificate/PRIVATE.key"
+  #   # This is RWS specific.
+  #   [http "https://git.rws.nl"]
+  #       sslCert = "~/git/rws/certificate/20251002-cert-csr.pem"
+  #       sslKey = "~/git/rws/certificate/PRIVATE.key"
 
-    [http "https://gitlab.at.rws.nl"]
-        sslCert = "~/git/rws/certificate/20251002-cert-csr.pem"
-        sslKey = "~/git/rws/certificate/PRIVATE.key"
-  '';
+  #   [http "https://gitlab.at.rws.nl"]
+  #       sslCert = "~/git/rws/certificate/20251002-cert-csr.pem"
+  #       sslKey = "~/git/rws/certificate/PRIVATE.key"
+  # '';
 
   programs.ssh = {
     # I have tried to create my ssh config through home manager but openssh does
