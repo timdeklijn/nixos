@@ -25,9 +25,6 @@
     enable = true;
   };
 
-  # nicer looking git diffs
-  programs.delta.enable = true;
-
   programs.fish = {
     enable = true;
     shellAliases = {
