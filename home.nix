@@ -42,6 +42,7 @@ in
     unstable.wl-clipboard
     unstable.azure-cli
     unstable.devpod
+    unstable.chezmoi
     wget
     lsof
     gnumake
@@ -106,7 +107,7 @@ in
   systemd.user.startServices = "sd-switch";
 
   home.file.".gitconfig".text = ''
-    [credential]
+     [credential]
         helper = manager
         credentialStore = secretservice
 
