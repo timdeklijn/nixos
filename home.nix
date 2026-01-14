@@ -24,6 +24,7 @@ in
     glib # light/dark theme detection
     nixfmt-rfc-style
     tmux
+    openssl
     unstable.btop
     unstable.codex
     unstable.goose-cli
