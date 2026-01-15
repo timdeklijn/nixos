@@ -184,7 +184,7 @@
     ];
     # Set default shell
     # shell = pkgs.zsh;
-    shell = pkgs.fish;
+    shell = pkgs.bashInteractive;
     subUidRanges = [
       {
         startUid = 100000;
@@ -200,7 +200,7 @@
   };
 
   # programs.zsh.enable = true;
-  programs.fish.enable = true;
+  programs.fish.enable = false;
   # download nerd fonts
   fonts.packages = with pkgs; [
     nerd-fonts.ubuntu-mono

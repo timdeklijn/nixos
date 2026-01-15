@@ -17,7 +17,6 @@ in
     # command line utilities
     fastfetch
     fd
-    fzf
     git
     git-credential-manager
     git-lfs

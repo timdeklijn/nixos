@@ -1,61 +1,27 @@
 { pkgs }:
 {
   # Startship prompt looks nice
-  programs.starship = {
-    enable = true;
-    enableFishIntegration = true;
-  };
+  # programs.starship = {
+  #   enable = true;
+  #   enableFishIntegration = true;
+  # };
 
   # zoxide for faster jumping to and from folders
-  programs.zoxide = {
-    enable = true;
-    package = pkgs.unstable.zoxide; # or pkgs.zoxide, but pick one
-    enableFishIntegration = true;
-  };
+  # programs.zoxide = {
+  #   enable = true;
+  #   package = pkgs.unstable.zoxide; # or pkgs.zoxide, but pick one
+  # };
 
   # search through history
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-    enableFishIntegration = true;
-  };
+  # programs.fzf = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  # };
 
   # auto source .envrc file
-  programs.direnv = {
-    enable = true;
-  };
-
-  programs.fish = {
-    enable = true;
-    shellAliases = {
-      ls = "eza";
-      ll = "eza -la";
-      y = "yazi";
-      h = "hx";
-      lg = "lazygit";
-      vim = "nvim";
-      zed = "zeditor";
-      nrs = "sudo nixos-rebuild switch --flake .#fw13";
-      hms = "home-manager switch --flake .#tim@fw13";
-      lt = "eza -la --tree --level=2";
-      c = "clear";
-      copy = "wl-copy";
-      paste = "wl-paste -n";
-      rgi = "rg -i";
-      ff = "fd -H";
-      t = "tmux";
-    };
-    shellAbbrs = {
-      gco = "git checkout";
-      gc = "git commit";
-      gp = "git push";
-      gst = "git status";
-      k = "kubectl";
-      kgp = "kubectl get pods -A";
-      kgn = "kubectl get ns";
-      dexauth = "set -x AUTHORIZATION \"Bearer \"(az account get-access-token --resource https://cognitiveservices.azure.com/ --query accessToken -o tsv)";
-    };
-  };
+  # programs.direnv = {
+  #   enable = true;
+  # };
 
   # programs.zsh = {
   #   # This should be set to true, even if it is set to configuration.nix.
