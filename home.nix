@@ -25,6 +25,7 @@ in
     nixfmt-rfc-style
     tmux
     openssl
+    unstable.atuin
     unstable.btop
     unstable.codex
     unstable.goose-cli
