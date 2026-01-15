@@ -44,6 +44,7 @@ in
     unstable.azure-cli
     unstable.devpod
     unstable.chezmoi
+    unstable.zoxide
     wget
     lsof
     gnumake
